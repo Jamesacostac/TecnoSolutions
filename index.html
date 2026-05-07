@@ -3,88 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecnoSolutions - Tutoriales Paso a Paso</title>
+    <title>TecnoSolutions - Inicio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <div class="logo">
-                <i class="fas fa-laptop-code"></i>
-                <span>TecnoSolutions</span>
-            </div>
+            <div class="logo"><i class="fas fa-laptop-code"></i> <span>TecnoSolutions</span></div>
             <nav>
-                <ul>
+                <ul id="main-nav">
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="index.html#servicios">Servicios</a></li>
-                    <li><a href="tutoriales.html" class="active">Tutoriales</a></li>
-                    <li><a href="registro.html">Registro</a></li>
+                    <li><a href="tutoriales.html">Tutoriales</a></li>
+                    <li><a href="#" onclick="checkAuth('Soporte Presencial')"><i class="fas fa-lock"></i> Soporte Presencial</a></li>
+                    <li><a href="#" onclick="checkAuth('Video Talleres')"><i class="fas fa-lock"></i> Video Talleres</a></li>
+                    <li id="nav-auth"><a href="registro.html" class="nav-button">Acceder / Registro</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="container" style="padding: 60px 20px;">
+    <section id="inicio" class="hero">
+        <div class="container hero-content">
+            <h1>Soluciones profesionales para tus dispositivos</h1>
+            <p>Asesoría especializada para laptops, PCs, celulares y consolas.</p>
+            <a href="#servicios" class="btn">Nuestros Servicios</a>
+        </div>
+    </section>
+
+    <section id="servicios" class="services container" style="padding: 60px 0;">
         <div class="section-title">
-            <h2>Guías y Tutoriales</h2>
-            <p>Aprende a realizar mantenimientos básicos tú mismo.</p>
+            <h2>Nuestros Servicios</h2>
+            <p>Mantenimiento y reparación integral</p>
         </div>
-
-        <div class="tutorial-card service-card">
-            <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h3><i class="fas fa-laptop"></i> Limpieza de Laptop</h3>
-                <span class="badge">Básico</span>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-tools fa-3x"></i>
+                <h3>Mantenimiento Preventivo</h3>
+                <p>Limpieza y optimización física e interna.</p>
             </div>
-            <div class="card-content">
-                <details>
-                    <summary style="cursor:pointer; font-weight: bold; color: var(--secondary-color);">Ver pasos del tutorial</summary>
-                    <div style="padding: 20px; text-align: left;">
-                        <ol style="line-height: 2;">
-                            <li>Apaga el equipo y retira la batería si es posible.</li>
-                            <li>Usa aire comprimido para limpiar las rejillas de ventilación.</li>
-                            <li>Limpia la pantalla con un paño de microfibra seco.</li>
-                            <li>Usa alcohol isopropílico para las teclas (con cuidado).</li>
-                        </ol>
-                    </div>
-                </details>
+            <div class="service-card">
+                <i class="fas fa-bug fa-3x"></i>
+                <h3>Eliminación de Virus</h3>
+                <p>Protección y limpieza de malware avanzado.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cogs fa-3x"></i>
+                <h3>Actualizaciones</h3>
+                <p>Instalación de SSD, RAM y componentes.</p>
             </div>
         </div>
+    </section>
 
-        <div class="tutorial-card service-card" style="margin-top: 30px;">
-            <div class="card-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h3><i class="fas fa-mobile-alt"></i> Optimización de Celular</h3>
-                <span class="badge">Software</span>
+    <section id="videos" class="container" style="padding-bottom: 80px;">
+        <div class="section-title">
+            <h2>Video Tutoriales</h2>
+            <p>Aprende visualmente con nuestros expertos</p>
+        </div>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe>
+                </div>
+                <div class="video-content">
+                    <h3>Limpieza interna de laptop</h3>
+                    <p>Guía paso a paso para abrir y limpiar tu equipo.</p>
+                </div>
             </div>
-            <div class="card-content">
-                <details>
-                    <summary style="cursor:pointer; font-weight: bold; color: var(--secondary-color);">Ver pasos del tutorial</summary>
-                    <div style="padding: 20px; text-align: left;">
-                        <ol style="line-height: 2;">
-                            <li>Borra el caché de las aplicaciones pesadas.</li>
-                            <li>Desinstala apps que no uses hace más de un mes.</li>
-                            <li>Reinicia el dispositivo al menos una vez por semana.</li>
-                        </ol>
-                    </div>
-                </details>
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe>
+                </div>
+                <div class="video-content">
+                    <h3>Optimización de Windows</h3>
+                    <p>Configura tu sistema para que vuele.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <div id="chat-window" class="chat-floating-window">
         <div class="chat-header" onclick="toggleChat()">
-            <div class="chat-header-info">
-                <i class="fas fa-robot"></i>
-                <span>Soporte IA</span>
-            </div>
+            <div class="chat-header-info"><i class="fas fa-robot"></i> <span>Asistente IA</span></div>
             <i class="fas fa-chevron-up" id="chat-icon-toggle"></i>
         </div>
         <div class="chat-body collapsed" id="chat-body">
-            <div class="chat-messages" id="chat-messages">
-                <div class="message bot-message">¿Necesitas ayuda con algún tutorial?</div>
+            <div class="chat-messages" id="chat-box">
+                <div class="message bot-message">¡Hola! ¿En qué puedo ayudarte hoy?</div>
             </div>
             <div class="chat-input">
-                <input type="text" id="chat-input-field" placeholder="Escribe aquí...">
+                <input type="text" id="chat-input-field" placeholder="Escribe tu duda...">
                 <button id="send-chat-btn"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
