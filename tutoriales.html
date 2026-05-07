@@ -2,111 +2,59 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Manuales Técnicos | TecnoSolutions</title>
+    <title>Tutoriales | TecnoSolutions</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <a href="index.html" class="logo">TecnoSolutions</a>
-            <nav><ul><li><a href="index.html">Inicio</a></li><li><a href="videos.html">Videos</a></li><li id="auth-btn-container"></li></ul></nav>
-        </div>
-    </header>
+    <header><div class="container header-content"><a href="index.html" class="logo">TecnoSolutions</a><nav><ul><li><a href="index.html">Inicio</a></li><li><a href="videos.html">Videos</a></li><li id="auth-btn-container"></li></ul></nav></div></header>
 
     <section class="container section-padding">
-        <h1 class="center-text">Tutoriales de Mantenimiento</h1>
-        
+        <h1 class="center-text">Manuales de Mantenimiento</h1>
         <div class="category-filters">
-            <button class="filter-btn" onclick="filterTutorials('laptop')"><i class="fas fa-laptop"></i> Laptops</button>
-            <button class="filter-btn" onclick="filterTutorials('smartphone')"><i class="fas fa-mobile-alt"></i> Smartphones</button>
-            <button class="filter-btn" onclick="filterTutorials('consola')"><i class="fas fa-gamepad"></i> Consolas</button>
-            <button class="filter-btn active" onclick="filterTutorials('all')">Ver Todos</button>
+            <button class="filter-btn" onclick="filterTutorials('laptop')">Laptops</button>
+            <button class="filter-btn" onclick="filterTutorials('smartphone')">Móviles</button>
+            <button class="filter-btn" onclick="filterTutorials('consola')">Consolas</button>
+            <button class="filter-btn active" onclick="filterTutorials('all')">Todos</button>
         </div>
 
         <div class="accordion-container">
             <details class="manual-item laptop">
-                <summary>
-                    <div class="summary-content"><div class="icon-box-small orange"><i class="fas fa-tools"></i></div>
-                    <div class="text-box"><h3>Limpieza Interna de Laptop</h3><p>Solución a problemas de calentamiento.</p></div></div>
-                </summary>
-                <div class="details-body">
-                    <p><strong>Pasos:</strong> 1. Abrir tapa trasera. 2. Sopletear ventiladores. 3. Aplicar pasta térmica en CPU/GPU.</p>
-                </div>
+                <summary><div class="summary-content"><div class="icon-box-small orange"><i class="fas fa-tools"></i></div><h3>Limpieza de Ventiladores</h3></div></summary>
+                <div class="details-body">Remueve el polvo usando aire comprimido en ráfagas cortas.</div>
             </details>
-
             <details class="manual-item laptop">
-                <summary>
-                    <div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-rocket"></i></div>
-                    <div class="text-box"><h3>Optimización de Windows</h3><p>Elimina la lentitud y el lag.</p></div></div>
-                </summary>
-                <div class="details-body">
-                    <p><strong>Pasos:</strong> 1. Desactivar apps de inicio. 2. Borrar carpeta Temp. 3. Desfragmentar disco duro.</p>
-                </div>
+                <summary><div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-rocket"></i></div><h3>Acelerar Windows 11</h3></div></summary>
+                <div class="details-body">Deshabilita apps de inicio y limpia archivos temporales.</div>
             </details>
-
             <details class="manual-item laptop">
-                <summary>
-                    <div class="summary-content"><div class="icon-box-small orange"><div class="fas fa-hdd"></div></div>
-                    <div class="text-box"><h3>Instalación de SSD</h3><p>Mejora la velocidad x10.</p></div></div>
-                </summary>
-                <div class="details-body">
-                    <p><strong>Pasos:</strong> 1. Clonar sistema. 2. Cambiar HDD por SSD. 3. Configurar BIOS.</p>
-                </div>
+                <summary><div class="summary-content"><div class="icon-box-small orange"><i class="fas fa-microchip"></i></div><h3>Cambio de Pasta Térmica</h3></div></summary>
+                <div class="details-body">Aplica una gota del tamaño de un guisante en el centro del procesador.</div>
             </details>
 
             <details class="manual-item smartphone">
-                <summary>
-                    <div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-mobile"></i></div>
-                    <div class="text-box"><h3>Limpieza de Puerto de Carga</h3><p>Si tu móvil no reconoce el cable.</p></div></div>
-                </summary>
-                <div class="details-body">
-                    <p><strong>Pasos:</strong> 1. Usar aguja o palillo. 2. Extraer pelusa. 3. Limpiar con alcohol isopropílico.</p>
-                </div>
+                <summary><div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-mobile"></i></div><h3>Puerto de Carga</h3></div></summary>
+                <div class="details-body">Usa un palillo fino para extraer pelusas del conector USB-C/Lightning.</div>
             </details>
-
             <details class="manual-item smartphone">
-                <summary>
-                    <div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-battery-half"></i></div>
-                    <div class="text-box"><h3>Cuidado de Batería</h3><p>Evita el desgaste prematuro.</p></div></div>
-                </summary>
-                <div class="details-body">
-                    <p><strong>Tips:</strong> Mantener entre 20% y 80%. Evitar usar cargadores genéricos.</p>
-                </div>
+                <summary><div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-battery-full"></i></div><h3>Salud de Batería</h3></div></summary>
+                <div class="details-body">Evita que el móvil se apague por falta de carga; manténlo sobre el 20%.</div>
+            </details>
+            <details class="manual-item smartphone">
+                <summary><div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-id-card"></i></div><h3>Respaldo de Datos</h3></div></summary>
+                <div class="details-body">Usa Google Drive o iCloud para mantener tus fotos seguras.</div>
             </details>
 
             <details class="manual-item consola">
-                <summary>
-                    <div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-gamepad"></i></div>
-                    <div class="text-box"><h3>Mantenimiento de PS5/Xbox</h3><p>Limpieza de filtros de polvo.</p></div></div>
-                </summary>
-                <div class="details-body">
-                    <p><strong>Pasos:</strong> 1. Retirar carcasas laterales. 2. Aspirar depósitos de polvo. 3. Limpiar ventilador.</p>
-                </div>
+                <summary><div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-gamepad"></i></div><h3>Mantenimiento PS5</h3></div></summary>
+                <div class="details-body">Retira las placas laterales para aspirar el polvo de los colectores.</div>
             </details>
-
             <details class="manual-item consola">
-                <summary>
-                    <div class="summary-content"><div class="icon-box-small orange"><i class="fas fa-tv"></i></div>
-                    <div class="text-box"><h3>Reparación de Ruido Raro</h3><p>Si tu consola vibra o suena fuerte.</p></div></div>
-                </summary>
-                <div class="details-body">
-                    <p><strong>Diagnóstico:</strong> Suele ser un objeto en el ventilador o rodamientos desgastados.</p>
-                </div>
-            </details>
-
-            <details class="manual-item consola">
-                <summary>
-                    <div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-wifi"></i></div>
-                    <div class="text-box"><h3>Mejorar Conexión Online</h3><p>Reduce el ping en tus juegos.</p></div></div>
-                </summary>
-                <div class="details-body">
-                    <p><strong>Configuración:</strong> Usar cable LAN y configurar DNS de Google o Cloudflare.</p>
-                </div>
+                <summary><div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-wifi"></i></div><h3>Optimización de Red</h3></div></summary>
+                <div class="details-body">Usa cable Ethernet para reducir el lag en partidas online.</div>
             </details>
         </div>
     </section>
-
     <script src="script.js"></script>
 </body>
 </html>

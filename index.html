@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecnoSolutions | Soporte Técnico Profesional</title>
+    <title>TecnoSolutions | Soporte Técnico</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -25,10 +25,10 @@
     <section class="hero">
         <div class="container">
             <h1>Mantenimiento y Optimización Pro</h1>
-            <p>Expertos en reparación de Laptops, Celulares y Consolas con estándares de alta calidad.</p>
+            <p>Soluciones expertas para PC, Laptops, Celulares y Consolas.</p>
             <div class="hero-btns">
                 <a href="tutoriales.html" class="btn-main">Ver Tutoriales</a>
-                <a href="https://wa.me/1234567890" class="btn-whatsapp-hero"><i class="fab fa-whatsapp"></i> Contactar Técnico</a>
+                <a href="https://wa.me/1234567890" class="btn-whatsapp-hero"><i class="fab fa-whatsapp"></i> Chat Técnico</a>
             </div>
         </div>
     </section>
@@ -37,19 +37,19 @@
         <h2 class="center-text">¿Por qué elegirnos?</h2>
         <div class="grid-3">
             <div class="info-card">
-                <i class="fas fa-microchip blue-icon"></i>
-                <h3>Componentes Top</h3>
-                <p>Solo usamos piezas originales y materiales de alta gama en cada reparación.</p>
+                <i class="fas fa-award blue-icon"></i>
+                <h3>Calidad Garantizada</h3>
+                <p>Usamos repuestos originales y materiales premium en cada reparación.</p>
             </div>
             <div class="info-card">
-                <i class="fas fa-user-shield blue-icon"></i>
-                <h3>Garantía Real</h3>
-                <p>Todos nuestros servicios cuentan con respaldo técnico y garantía escrita.</p>
+                <i class="fas fa-user-clock blue-icon"></i>
+                <h3>Rapidez y Eficiencia</h3>
+                <p>Diagnósticos veloces para que recuperes tu equipo en tiempo récord.</p>
             </div>
             <div class="info-card">
-                <i class="fas fa-bolt blue-icon"></i>
-                <h3>Servicio Express</h3>
-                <p>Diagnósticos rápidos y soluciones eficientes para que no detengas tu ritmo.</p>
+                <i class="fas fa-shield-alt blue-icon"></i>
+                <h3>Seguridad de Datos</h3>
+                <p>Privacidad total en el manejo de tu información personal.</p>
             </div>
         </div>
     </section>
@@ -60,18 +60,18 @@
             <div class="grid-3">
                 <div class="info-card">
                     <i class="fas fa-tools blue-icon"></i>
-                    <h3>Mantenimiento Preventivo</h3>
-                    <p>Limpieza interna profunda, cambio de pasta térmica y optimización de hardware.</p>
+                    <h3>Preventivo</h3>
+                    <p>Limpieza profunda y cambio de pasta térmica.</p>
                 </div>
                 <div class="info-card">
                     <i class="fas fa-bug blue-icon"></i>
-                    <h3>Eliminación de Virus</h3>
-                    <p>Limpieza total de malware y spyware, con instalación de seguridad avanzada.</p>
+                    <h3>Seguridad</h3>
+                    <p>Eliminación de virus y malware avanzado.</p>
                 </div>
                 <div class="info-card">
-                    <i class="fas fa-cog blue-icon"></i>
-                    <h3>Upgrades de Hardware</h3>
-                    <p>Instalación de discos SSD, expansión de memoria RAM y tarjetas gráficas.</p>
+                    <i class="fas fa-microchip blue-icon"></i>
+                    <h3>Hardware</h3>
+                    <p>Upgrades de memoria RAM y unidades SSD.</p>
                 </div>
             </div>
         </div>
@@ -81,7 +81,7 @@
         <div class="contact-wrapper">
             <div class="contact-info">
                 <h2>Agenda tu cita</h2>
-                <p>Haz clic en el botón de abajo para hablar con un técnico por WhatsApp.</p>
+                <p>¿Tu equipo falla? Contáctanos de inmediato por WhatsApp.</p>
                 <a href="https://wa.me/1234567890" class="btn-whatsapp-large">
                     <i class="fab fa-whatsapp"></i> Agendar vía WhatsApp
                 </a>
@@ -89,11 +89,11 @@
             <div class="comment-form-card">
                 <h3>Envíanos un mensaje</h3>
                 <form id="commentForm">
-                    <input type="text" placeholder="Tu Nombre" class="form-input" required>
+                    <input type="text" placeholder="Tu nombre" class="form-input" required>
                     <textarea placeholder="Agrega tu comentario..." class="form-input" rows="4" required></textarea>
                     <div class="data-privacy">
                         <input type="checkbox" id="privacy" required>
-                        <label for="privacy">Acepto el tratamiento de datos personales.</label>
+                        <label for="privacy">Acepto el tratamiento de datos.</label>
                     </div>
                     <button type="submit" class="btn-submit-pro">Enviar Mensaje</button>
                 </form>
@@ -101,22 +101,22 @@
         </div>
     </section>
 
+    <div class="ai-assistant" id="ai-chat">
+        <div class="chat-header">Asistente IA TecnoSolutions</div>
+        <div class="chat-body">
+            <p>¡Hola! 👋 Soy tu asistente virtual. ¿En qué puedo ayudarte con tu equipo hoy?</p>
+        </div>
+        <div class="chat-footer">
+            <input type="text" placeholder="Escribe tu duda técnica...">
+        </div>
+    </div>
+    <button class="ai-toggle" onclick="toggleChat()"><i class="fas fa-robot"></i></button>
+
     <footer>
         <div class="container footer-grid">
             <div class="footer-about">
                 <div class="logo-footer"><i class="fas fa-laptop-code"></i> TecnoSolutions</div>
-                <p>Líderes en soporte técnico digital y mantenimiento preventivo.</p>
-                <div class="social-links">
-                    <i class="fab fa-facebook-f"></i> <i class="fab fa-instagram"></i> <i class="fab fa-twitter"></i>
-                </div>
-            </div>
-            <div class="footer-nav-col">
-                <h4>Navegación</h4>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="tutoriales.html">Tutoriales</a></li>
-                    <li><a href="videos.html">Videos</a></li>
-                </ul>
+                <p>Expertos en tecnología a tu servicio.</p>
             </div>
             <div class="footer-contact-col">
                 <h4>Contacto</h4>
@@ -125,7 +125,6 @@
             </div>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
