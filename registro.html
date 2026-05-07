@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - TecnoSolutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo"><i class="fas fa-laptop-code"></i> <span>TecnoSolutions</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tutoriales.html">Tutoriales</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container" style="padding: 80px 20px;">
+        <div id="auth-box" class="service-card" style="max-width: 450px; margin: auto;">
+            <h2>Crear Usuario</h2>
+            <form id="register-form" style="margin-top:20px; display:flex; flex-direction:column; gap:15px;">
+                <input type="text" id="reg-name" placeholder="Tu Nombre" required class="input-style">
+                <input type="email" placeholder="Correo Electrónico" required class="input-style">
+                <input type="password" placeholder="Contraseña" required class="input-style">
+                <button type="submit" class="btn-primary">Registrarme</button>
+            </form>
+        </div>
+
+        <div id="vip-section" class="hidden">
+            <h2 class="section-title">Servicios VIP Desbloqueados</h2>
+            <div class="services-grid">
+                <div class="service-card highlight">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Soporte Presencial</h3>
+                    <p>Técnico a domicilio en 24h.</p>
+                    <button class="btn-primary">Solicitar</button>
+                </div>
+                <div class="service-card highlight">
+                    <i class="fas fa-play-circle"></i>
+                    <h3>Video Talleres</h3>
+                    <p>Cursos de reparación avanzada.</p>
+                    <button class="btn-primary">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

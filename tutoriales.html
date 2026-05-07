@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoSolutions - Tutoriales de Mantenimiento</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>TecnoSolutions</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="tutoriales.html">Tutoriales</a></li>
+                    <li><a href="index.html#soporte">Soporte IA</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="tutoriales-header">
+        <div class="container">
+            <h1>Tutoriales de Mantenimiento Paso a Paso</h1>
+            <p>Aprende a mantener y limpiar tus dispositivos con nuestras guías detalladas. ¡Haz clic en una categoría para ver los tutoriales!</p>
+        </div>
+    </section>
+
+    <section class="tutorial-container">
+        <div class="container">
+            
+            <!-- Menú de navegación de categorías (Nuevo) -->
+            <div class="tutorial-nav">
+                <a href="#laptop-tutorials" class="btn-tutorial-nav"><i class="fas fa-laptop"></i> Laptops</a>
+                <a href="#smartphone-tutorials" class="btn-tutorial-nav"><i class="fas fa-mobile-alt"></i> Smartphones</a>
+                <a href="#console-tutorials" class="btn-tutorial-nav"><i class="fas fa-gamepad"></i> Consolas</a>
+            </div>
+
+            <!-- Sección de Tutoriales de Laptops -->
+            <h2 id="laptop-tutorials" class="tutorial-category-title"><i class="fas fa-laptop-code"></i> Tutoriales para Laptops y PC</h2>
+            <div class="tutorial-grid">
+                <!-- Tutorial 1: Limpieza de una Laptop -->
+                <div class="tutorial-card">
+                    <div class="card-header">
+                        <h3>Limpieza Profunda de Laptop (Interna y Externa)</h3>
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Guía detallada para limpiar tu laptop, incluyendo el reemplazo de pasta térmica.</p>
+                        <details class="tutorial-details">
+                            <summary>Ver Materiales y Pasos <i class="fas fa-chevron-down"></i></summary>
+                            <div class="details-content">
+                                <h4>Materiales Necesarios</h4>
+                                <ul class="materiales-list">
+                                    <li>Aire comprimido (especial para electrónica)</li>
+                                    <li>Alcohol isopropílico (90% o superior)</li>
+                                    <li>Paños de microfibra o toallas de papel sin pelusa</li>
+                                    <li>Destornilladores de precisión (Phillips y planos)</li>
+                                    <li>Pasta térmica de calidad (si se va a reemplazar)</li>
+                                    <li>Hisopos de algodón</li>
+                                    <li>Brocha antiestática suave</li>
+                                </ul>
+                                
+                                <h4>Pasos a Seguir</h4>
+                                <ol class="pasos-list">
+                                    <li>**Preparación y Seguridad:** Apaga la laptop, desconecta el cargador y retira la batería (si es extraíble). Colócate en una superficie limpia y bien iluminada.</li>
+                                    <li>**Limpieza Externa:** Usa un paño de microfibra humedecido con alcohol isopropílico para limpiar la carcasa, el teclado y el trackpad. Utiliza aire comprimido para desalojar el polvo entre las teclas.</li>
+                                    <li>**Acceso a Componentes (Interna):** Retira los tornillos de la cubierta inferior con cuidado. Identifica y desconecta los cables de la batería, ventiladores y otros componentes si es necesario para el acceso.</li>
+                                    <li>**Limpieza de Ventiladores y Disipadores:** Usa aire comprimido en ráfagas cortas para limpiar el polvo de los ventiladores y las rejillas del disipador de calor. Sostén las aspas del ventilador para evitar que giren mientras aplicas el aire.</li>
+                                    <li>**Reemplazo de Pasta Térmica (Opcional):** Si la laptop tiene más de dos años o presenta problemas de temperatura, retira el disipador de calor. Limpia la pasta térmica vieja del CPU/GPU con alcohol isopropílico y aplica una pequeña cantidad de pasta nueva (método del grano de arroz o X).</li>
+                                    <li>**Reensamblaje:** Vuelve a conectar los componentes, coloca la cubierta inferior y atornilla cuidadosamente. Asegúrate de que no queden tornillos sobrantes y que todos los cables estén conectados.</li>
+                                    <li>**Prueba Final:** Enciende la laptop y verifica que los ventiladores funcionen correctamente y que la temperatura del sistema sea estable.</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                
+                <!-- Tutorial Adicional (Ejemplo) -->
+                <div class="tutorial-card">
+                    <div class="card-header">
+                        <h3>Optimización de Windows 10/11 para Mejor Rendimiento</h3>
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Configuración esencial para que tu sistema operativo funcione a la máxima velocidad.</p>
+                        <details class="tutorial-details">
+                            <summary>Ver Pasos de Optimización <i class="fas fa-chevron-down"></i></summary>
+                            <div class="details-content">
+                                <h4>Pasos a Seguir</h4>
+                                <ol class="pasos-list">
+                                    <li>**Desinstalar Programas Innecesarios:** Ve a 'Agregar o quitar programas' y elimina el software que ya no utilizas.</li>
+                                    <li>**Limpieza de Archivos Temporales:** Usa la herramienta 'Liberador de espacio en disco' de Windows o un software de terceros para eliminar archivos basura.</li>
+                                    <li>**Desactivar Programas de Inicio:** Abre el 'Administrador de Tareas' (Ctrl+Shift+Esc), ve a la pestaña 'Inicio' y deshabilita los programas que no necesitas que se ejecuten al encender la PC.</li>
+                                    <li>**Desfragmentar o Optimizar Disco:** Si usas un HDD, desfragmenta el disco. Si usas un SSD, asegúrate de que la optimización esté activada.</li>
+                                    <li>**Actualizar Drivers:** Usa el 'Administrador de Dispositivos' o el software del fabricante para mantener todos los controladores al día.</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Tutoriales de Smartphones -->
+            <h2 id="smartphone-tutorials" class="tutorial-category-title"><i class="fas fa-mobile-alt"></i> Tutoriales para Smartphones</h2>
+            <div class="tutorial-grid">
+                <!-- Tutorial 2: Limpieza de un Smartphone -->
+                <div class="tutorial-card">
+                    <div class="card-header">
+                        <h3>Limpieza y Desinfección de Smartphone</h3>
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Mantén tu teléfono libre de gérmenes y suciedad, especialmente en los puertos.</p>
+                        <details class="tutorial-details">
+                            <summary>Ver Materiales y Pasos <i class="fas fa-chevron-down"></i></summary>
+                            <div class="details-content">
+                                <h4>Materiales Necesarios</h4>
+                                <ul class="materiales-list">
+                                    <li>Paño de microfibra suave</li>
+                                    <li>Solución desinfectante a base de alcohol isopropílico (70% recomendado) o toallitas desinfectantes para electrónica</li>
+                                    <li>Hisopos de algodón o palillos de dientes (para puertos)</li>
+                                </ul>
+                                
+                                <h4>Pasos a Seguir</h4>
+                                <ol class="pasos-list">
+                                    <li>**Preparación:** Apaga el teléfono y desconecta cualquier cable. Retira la funda y el protector de pantalla (si es posible).</li>
+                                    <li>**Limpieza de Pantalla y Carcasa:** Limpia suavemente la pantalla y la parte trasera con el paño de microfibra. Si usas una solución desinfectante, rocía el paño (no directamente el teléfono) y limpia con movimientos circulares.</li>
+                                    <li>**Puertos y Altavoces:** Con un hisopo de algodón o un palillo de dientes envuelto en un paño muy fino, limpia con mucho cuidado los puertos de carga, los altavoces y el micrófono para remover pelusa y suciedad. **No introduzcas objetos metálicos ni apliques presión excesiva.**</li>
+                                    <li>**Desinfección:** Utiliza una toallita desinfectante o el paño con alcohol isopropílico para desinfectar las superficies que más tocas. Evita que el líquido entre en los puertos.</li>
+                                    <li>**Secado y Reensamblaje:** Deja que el teléfono se seque completamente al aire. Limpia la funda y el protector de pantalla antes de volver a colocarlos.</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Tutoriales de Consolas -->
+            <h2 id="console-tutorials" class="tutorial-category-title"><i class="fas fa-gamepad"></i> Tutoriales para Consolas de Videojuegos</h2>
+            <div class="tutorial-grid">
+                <!-- Tutorial 3: Limpieza de una Consola de Videojuegos -->
+                <div class="tutorial-card">
+                    <div class="card-header">
+                        <h3>Limpieza General de Consola de Videojuegos</h3>
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Asegura una ventilación óptima para evitar el sobrecalentamiento de tu consola.</p>
+                        <details class="tutorial-details">
+                            <summary>Ver Materiales y Pasos <i class="fas fa-chevron-down"></i></summary>
+                            <div class="details-content">
+                                <h4>Materiales Necesarios</h4>
+                                <ul class="materiales-list">
+                                    <li>Aire comprimido</li>
+                                    <li>Paño de microfibra</li>
+                                    <li>Hisopos de algodón</li>
+                                    <li>Brocha suave</li>
+                                </ul>
+                                
+                                <h4>Pasos a Seguir</h4>
+                                <ol class="pasos-list">
+                                    <li>**Desconexión:** Apaga y desconecta completamente la consola de la corriente y de la TV.</li>
+                                    <li>**Limpieza Exterior:** Humedece ligeramente un paño de microfibra con agua (o una solución de agua y alcohol isopropílico al 50%) y limpia la carcasa de la consola.</li>
+                                    <li>**Ventilaciones:** Usa la brocha suave y el aire comprimido para limpiar las rejillas de ventilación. Asegúrate de que no entre polvo en la consola.</li>
+                                    <li>**Puertos:** Utiliza los hisopos de algodón para limpiar los puertos USB, HDMI, etc.</li>
+                                    <li>**Secado:** Deja que la consola se seque completamente antes de volver a conectarla.</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <i class="fas fa-laptop-code"></i> TecnoSolutions
+                </div>
+                <p>Tu aliado en el mantenimiento y optimización de tus dispositivos tecnológicos.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="tutoriales.html">Tutoriales</a></li>
+                    <li><a href="index.html#soporte">Soporte IA</a></li>
+                    <li><a href="index.html#videos">Videos</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Tecnología #123</li>
+                    <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                    <li><i class="fas fa-envelope"></i> soporte@tecnosolutions.com</li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 TecnoSolutions. Todos los derechos reservados.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
