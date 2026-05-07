@@ -2,18 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Acceso | TecnoSolutions</title>
+    <title>Registro | TecnoSolutions</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-alt">
     <section class="container section-padding">
-        <div class="comment-form-card" style="max-width: 400px; margin: auto;">
+        <div class="auth-card">
             <h2 class="center-text">Crear Cuenta</h2>
+            <p class="center-text subtitle">Únete a nuestra comunidad técnica</p>
             <form onsubmit="handleRegistration(event)">
-                <input type="text" id="reg-name" placeholder="Nombre completo" class="form-input" required>
-                <input type="email" id="reg-email" placeholder="Correo electrónico" class="form-input" required>
-                <button type="submit" class="btn-submit">Registrarse e Ingresar</button>
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="reg-name" placeholder="Tu nombre" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" placeholder="email@ejemplo.com" class="form-input" required>
+                </div>
+                <button type="submit" class="btn-submit-pro">Registrarse Ahora</button>
             </form>
+            <p class="center-text" style="margin-top: 15px;"><a href="index.html">Volver al inicio</a></p>
         </div>
     </section>
     <script src="script.js"></script>

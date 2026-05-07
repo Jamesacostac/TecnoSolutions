@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tutoriales Técnicos | TecnoSolutions</title>
+    <title>Manuales Técnicos | TecnoSolutions</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -15,32 +15,98 @@
     </header>
 
     <section class="container section-padding">
-        <h1 class="center-text">Manuales de Mantenimiento Preventivo</h1>
+        <h1 class="center-text">Tutoriales de Mantenimiento</h1>
         
-        <div class="tutorial-stack">
-            <div class="tutorial-item">
-                <div class="item-header">
-                    <h2>Mantenimiento Interno de Laptop</h2>
+        <div class="category-filters">
+            <button class="filter-btn" onclick="filterTutorials('laptop')"><i class="fas fa-laptop"></i> Laptops</button>
+            <button class="filter-btn" onclick="filterTutorials('smartphone')"><i class="fas fa-mobile-alt"></i> Smartphones</button>
+            <button class="filter-btn" onclick="filterTutorials('consola')"><i class="fas fa-gamepad"></i> Consolas</button>
+            <button class="filter-btn active" onclick="filterTutorials('all')">Ver Todos</button>
+        </div>
+
+        <div class="accordion-container">
+            <details class="manual-item laptop">
+                <summary>
+                    <div class="summary-content"><div class="icon-box-small orange"><i class="fas fa-tools"></i></div>
+                    <div class="text-box"><h3>Limpieza Interna de Laptop</h3><p>Solución a problemas de calentamiento.</p></div></div>
+                </summary>
+                <div class="details-body">
+                    <p><strong>Pasos:</strong> 1. Abrir tapa trasera. 2. Sopletear ventiladores. 3. Aplicar pasta térmica en CPU/GPU.</p>
                 </div>
-                <div class="item-body">
-                    <h3><i class="fas fa-briefcase"></i> Materiales:</h3>
-                    <ul class="material-list">
-                        <li>Juego de destornilladores de precisión (Estrella y Torx).</li>
-                        <li>Alcohol isopropílico (Pureza 99%).</li>
-                        <li>Pasta térmica (Arctic MX-4 o Thermal Grizzly).</li>
-                        <li>Aire comprimido y brocha antiestática.</li>
-                    </ul>
-                    <hr>
-                    <h3><i class="fas fa-list-ol"></i> Paso a Paso:</h3>
-                    <div class="step"><span>1</span><p><strong>Apertura:</strong> Retira los tornillos de la carcasa inferior y usa una palanca de plástico para abrir los clips sin dañar el chasis.</p></div>
-                    <div class="step"><span>2</span><p><strong>Desconexión:</strong> Ubica la batería y desconecta el flex que va a la tarjeta madre. ¡Este paso es vital para no quemar componentes!</p></div>
-                    <div class="step"><span>3</span><p><strong>Ventilación:</strong> Retira el ventilador y el disipador. Usa aire comprimido para sacar el polvo acumulado en las rejillas.</p></div>
-                    <div class="step"><span>4</span><p><strong>Cambio de Pasta:</strong> Limpia la pasta vieja con alcohol. Aplica una cantidad del tamaño de un grano de arroz en el procesador.</p></div>
-                    <div class="step"><span>5</span><p><strong>Cierre:</strong> Vuelve a conectar todo, atornilla el disipador en el orden numérico marcado y cierra el equipo.</p></div>
+            </details>
+
+            <details class="manual-item laptop">
+                <summary>
+                    <div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-rocket"></i></div>
+                    <div class="text-box"><h3>Optimización de Windows</h3><p>Elimina la lentitud y el lag.</p></div></div>
+                </summary>
+                <div class="details-body">
+                    <p><strong>Pasos:</strong> 1. Desactivar apps de inicio. 2. Borrar carpeta Temp. 3. Desfragmentar disco duro.</p>
                 </div>
-            </div>
+            </details>
+
+            <details class="manual-item laptop">
+                <summary>
+                    <div class="summary-content"><div class="icon-box-small orange"><div class="fas fa-hdd"></div></div>
+                    <div class="text-box"><h3>Instalación de SSD</h3><p>Mejora la velocidad x10.</p></div></div>
+                </summary>
+                <div class="details-body">
+                    <p><strong>Pasos:</strong> 1. Clonar sistema. 2. Cambiar HDD por SSD. 3. Configurar BIOS.</p>
+                </div>
+            </details>
+
+            <details class="manual-item smartphone">
+                <summary>
+                    <div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-mobile"></i></div>
+                    <div class="text-box"><h3>Limpieza de Puerto de Carga</h3><p>Si tu móvil no reconoce el cable.</p></div></div>
+                </summary>
+                <div class="details-body">
+                    <p><strong>Pasos:</strong> 1. Usar aguja o palillo. 2. Extraer pelusa. 3. Limpiar con alcohol isopropílico.</p>
+                </div>
+            </details>
+
+            <details class="manual-item smartphone">
+                <summary>
+                    <div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-battery-half"></i></div>
+                    <div class="text-box"><h3>Cuidado de Batería</h3><p>Evita el desgaste prematuro.</p></div></div>
+                </summary>
+                <div class="details-body">
+                    <p><strong>Tips:</strong> Mantener entre 20% y 80%. Evitar usar cargadores genéricos.</p>
+                </div>
+            </details>
+
+            <details class="manual-item consola">
+                <summary>
+                    <div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-gamepad"></i></div>
+                    <div class="text-box"><h3>Mantenimiento de PS5/Xbox</h3><p>Limpieza de filtros de polvo.</p></div></div>
+                </summary>
+                <div class="details-body">
+                    <p><strong>Pasos:</strong> 1. Retirar carcasas laterales. 2. Aspirar depósitos de polvo. 3. Limpiar ventilador.</p>
+                </div>
+            </details>
+
+            <details class="manual-item consola">
+                <summary>
+                    <div class="summary-content"><div class="icon-box-small orange"><i class="fas fa-tv"></i></div>
+                    <div class="text-box"><h3>Reparación de Ruido Raro</h3><p>Si tu consola vibra o suena fuerte.</p></div></div>
+                </summary>
+                <div class="details-body">
+                    <p><strong>Diagnóstico:</strong> Suele ser un objeto en el ventilador o rodamientos desgastados.</p>
+                </div>
+            </details>
+
+            <details class="manual-item consola">
+                <summary>
+                    <div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-wifi"></i></div>
+                    <div class="text-box"><h3>Mejorar Conexión Online</h3><p>Reduce el ping en tus juegos.</p></div></div>
+                </summary>
+                <div class="details-body">
+                    <p><strong>Configuración:</strong> Usar cable LAN y configurar DNS de Google o Cloudflare.</p>
+                </div>
+            </details>
         </div>
     </section>
+
     <script src="script.js"></script>
 </body>
 </html>

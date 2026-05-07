@@ -1,56 +1,51 @@
-document.addEventListener('DOMContentLoaded', () => {
-    actualizarNavegacion();
-});
+// 1. FILTRADO DE TUTORIALES
+function filterTutorials(category) {
+    const items = document.querySelectorAll('.manual-item');
+    const buttons = document.querySelectorAll('.filter-btn');
 
-// SESIÓN DE USUARIO
+    // Cambiar estado activo de los botones
+    buttons.forEach(btn => btn.classList.remove('active'));
+    // Encontrar el botón clickeado
+    event.currentTarget.classList.add('active');
+
+    items.forEach(item => {
+        if (category === 'all') {
+            item.style.display = 'block';
+        } else {
+            if (item.classList.contains(category)) {
+                item.style.display = 'block';
+            } else {
+                item.style.display = 'none';
+            }
+        }
+    });
+}
+
+// 2. SESIÓN DE USUARIO
 function handleRegistration(e) {
     e.preventDefault();
-    const name = document.getElementById('reg-name').value;
-    const email = document.getElementById('reg-email').value;
-    localStorage.setItem('userSession', JSON.stringify({ name, email }));
-    window.location.href = "index.html";
-}
-
-function actualizarNavegacion() {
-    const authContainer = document.getElementById('auth-btn-container');
-    const user = JSON.parse(localStorage.getItem('userSession'));
-    if (user && authContainer) {
-        authContainer.innerHTML = `
-            <a href="perfil.html" class="btn-nav" style="background: #10b981;">
-                <i class="fas fa-user-check"></i> Hola, ${user.name.split(' ')[0]}
-            </a>
-        `;
+    const nameInput = document.getElementById('reg-name');
+    if(nameInput) {
+        localStorage.setItem('userSession', JSON.stringify({ name: nameInput.value }));
+        window.location.href = "index.html";
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const authContainer = document.getElementById('auth-btn-container');
+    const user = JSON.parse(localStorage.getItem('userSession'));
+    
+    if (user && authContainer) {
+        authContainer.innerHTML = `
+            <a href="#" class="btn-nav" style="background: #10b981;">
+                <i class="fas fa-user-circle"></i> Hola, ${user.name.split(' ')[0]}
+            </a>
+            <button onclick="cerrarSesion()" style="margin-left:10px; background:none; border:none; color:red; cursor:pointer;">X</button>
+        `;
+    }
+});
 
 function cerrarSesion() {
     localStorage.removeItem('userSession');
-    window.location.href = "index.html";
-}
-
-// ASISTENTE IA
-function toggleChat() {
-    document.getElementById('chat-window').classList.toggle('active');
-}
-
-function handleChat() {
-    const input = document.getElementById('user-input');
-    const box = document.getElementById('chat-box');
-    if (!input.value) return;
-
-    box.innerHTML += `<div class="msg user">${input.value}</div>`;
-    let res = "Interesante. ¿Tu equipo es PC o Celular?";
-    
-    const texto = input.value.toLowerCase();
-    if(texto.includes("calienta") || texto.includes("calor")) {
-        res = "El sobrecalentamiento suele ser por polvo o pasta térmica seca. ¡Revisa nuestra sección de Tutoriales Escritos!";
-    } else if(texto.includes("ruido")) {
-        res = "Si escuchas ruidos, puede ser el ventilador obstruido o el disco duro fallando.";
-    }
-
-    setTimeout(() => {
-        box.innerHTML += `<div class="msg bot">${res}</div>`;
-        box.scrollTop = box.scrollHeight;
-    }, 600);
-    input.value = "";
+    window.location.reload();
 }
