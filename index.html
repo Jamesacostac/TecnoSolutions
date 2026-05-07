@@ -3,142 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecnoSolutions - Mantenimiento Profesional</title>
+    <title>TecnoSolutions - Tutoriales de Mantenimiento</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <div class="logo"><i class="fas fa-laptop-code"></i> <span>TecnoSolutions</span></div>
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>TecnoSolutions</span>
+            </div>
             <nav>
-                <ul id="main-nav">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
                     <li><a href="tutoriales.html">Tutoriales</a></li>
-                    <li><a href="#" onclick="checkAuth('Soporte Presencial')"><i class="fas fa-lock"></i> Soporte Presencial</a></li>
-                    <li><a href="#" onclick="checkAuth('Video Talleres')"><i class="fas fa-lock"></i> Video Talleres</a></li>
-                    <li id="nav-auth"><a href="registro.html" class="nav-button">Acceder / Registro</a></li>
+                    <li><a href="index.html#soporte">Soporte IA</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="container hero-content">
-            <h1>Soluciones profesionales para tus dispositivos</h1>
-            <p>Asesoría especializada para <strong>laptops, PCs, celulares y consolas</strong>. ¡Mantén tus equipos al 100%!</p>
-            <a href="#servicios" class="btn">Nuestros Servicios</a>
-            <a href="tutoriales.html" class="btn btn-alt">Ver Tutoriales</a>
+    <section class="tutoriales-header">
+        <div class="container">
+            <h1>Tutoriales de Mantenimiento Paso a Paso</h1>
+            <p>Aprende a mantener y limpiar tus dispositivos con nuestras guías detalladas.</p>
         </div>
     </section>
 
-    <section id="servicios" class="services container">
-        <div class="section-title">
-            <h2>Nuestros Servicios</h2>
-            <p>Soluciones integrales para el mantenimiento y reparación</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card" onclick="scrollToSection('mantenimiento')">
-                <i class="fas fa-tools fa-3x"></i>
-                <h3>Mantenimiento Preventivo</h3>
-                <p>Limpieza interna y externa, optimización de software y más.</p>
+    <section class="tutorial-container">
+        <div class="container">
+            
+            <div class="tutorial-nav">
+                <a href="#laptop-tutorials" class="btn-tutorial-nav"><i class="fas fa-laptop"></i> Laptops</a>
+                <a href="#smartphone-tutorials" class="btn-tutorial-nav"><i class="fas fa-mobile-alt"></i> Smartphones</a>
+                <a href="#console-tutorials" class="btn-tutorial-nav"><i class="fas fa-gamepad"></i> Consolas</a>
             </div>
-            <div class="service-card" onclick="scrollToSection('virus')">
-                <i class="fas fa-bug fa-3x"></i>
-                <h3>Eliminación de Virus</h3>
-                <p>Limpieza de malware y protección con antivirus especializados.</p>
+
+            <h2 id="laptop-tutorials" class="tutorial-category-title"><i class="fas fa-laptop-code"></i> Tutoriales para Laptops y PC</h2>
+            <div class="tutorial-grid">
+                <div class="tutorial-card">
+                    <div class="card-header">
+                        <h3>Limpieza Profunda de Laptop</h3>
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Guía detallada para limpiar tu laptop y el reemplazo de pasta térmica.</p>
+                        <details class="tutorial-details">
+                            <summary>Ver Materiales y Pasos <i class="fas fa-chevron-down"></i></summary>
+                            <div class="details-content">
+                                <h4>Materiales</h4>
+                                <ul class="materiales-list">
+                                    <li>Aire comprimido y Alcohol isopropílico (90%)</li>
+                                    <li>Paños de microfibra y brochas antiestáticas</li>
+                                </ul>
+                                <h4>Pasos</h4>
+                                <ol class="pasos-list">
+                                    <li>Apaga y desconecta la batería.</li>
+                                    <li>Limpia el teclado con aire comprimido.</li>
+                                    <li>Abre la carcasa y limpia ventiladores suavemente.</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
+                </div>
             </div>
-            <div class="service-card" onclick="scrollToSection('actualizacion')">
-                <i class="fas fa-cogs fa-3x"></i>
-                <h3>Actualización de Hardware</h3>
-                <p>Asesoría e instalación de SSD, RAM y tarjetas gráficas.</p>
+
+            <h2 id="smartphone-tutorials" class="tutorial-category-title"><i class="fas fa-mobile-alt"></i> Tutoriales para Smartphones</h2>
+            <div class="tutorial-grid">
+                <div class="tutorial-card">
+                    <div class="card-header">
+                        <h3>Limpieza de Puertos y Pantalla</h3>
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Evita problemas de carga limpiando correctamente los puertos USB-C o Lightning.</p>
+                        <details class="tutorial-details">
+                            <summary>Ver Materiales y Pasos <i class="fas fa-chevron-down"></i></summary>
+                            <div class="details-content">
+                                <h4>Materiales</h4>
+                                <ul class="materiales-list">
+                                    <li>Palillos de madera o plástico (nunca metal).</li>
+                                    <li>Alcohol isopropílico y paño suave.</li>
+                                </ul>
+                                <h4>Pasos</h4>
+                                <ol class="pasos-list">
+                                    <li>Remueve pelusas del puerto de carga con el palillo.</li>
+                                    <li>Limpia la pantalla con el paño humedecido levemente.</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <section id="videos" class="videos-section container">
-        <div class="section-title">
-            <h2>Video Tutoriales</h2>
-            <p>Aprende a resolver problemas comunes paso a paso</p>
-        </div>
-
-        <h3 id="mantenimiento" class="video-subtitle">Mantenimiento Preventivo</h3>
-        <div class="video-grid">
-            <div class="video-card">
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe></div>
-                <div class="video-content"><h3>Limpieza interna de laptop</h3><p>Aprende a limpiar el interior de tu laptop de forma segura.</p></div>
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="footer-logo"><i class="fas fa-laptop-code"></i> TecnoSolutions</div>
+                <p>Tu aliado en el mantenimiento tecnológico.</p>
             </div>
-            <div class="video-card">
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe></div>
-                <div class="video-content"><h3>Optimización de Windows</h3><p>Mejora el rendimiento de tu sistema operativo.</p></div>
-            </div>
+            <div class="copyright">&copy; 2024 TecnoSolutions. Todos los derechos reservados.</div>
         </div>
-
-        <h3 id="virus" class="video-subtitle">Eliminación de Virus</h3>
-        <div class="video-grid">
-            <div class="video-card">
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe></div>
-                <div class="video-content"><h3>Malware Avanzado</h3><p>Identifica y elimina software malicioso.</p></div>
-            </div>
-            <div class="video-card">
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe></div>
-                <div class="video-content"><h3>Ransomware</h3><p>Protege tus datos contra secuestro digital.</p></div>
-            </div>
-        </div>
-
-        <h3 id="actualizacion" class="video-subtitle">Actualización de Hardware</h3>
-        <div class="video-grid">
-            <div class="video-card">
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe></div>
-                <div class="video-content"><h3>Instalación de RAM</h3><p>Guía completa para instalar memoria en tu PC.</p></div>
-            </div>
-            <div class="video-card">
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe></div>
-                <div class="video-content"><h3>Cambio de SSD</h3><p>Aumenta la velocidad de tu equipo drásticamente.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="container contact-section">
-        <div class="contact-info">
-            <h2 style="color: #345e7e; margin-bottom: 20px;">Contacto</h2>
-            <p><i class="fas fa-map-marker-alt"></i> Av. Tecnología #123, Ciudad Digital</p>
-            <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
-            <p><i class="fas fa-envelope"></i> soporte@tecnosolutions.com</p>
-        </div>
-        <div class="contact-form">
-            <h3>Envíanos un mensaje</h3>
-            <form id="commentForm">
-                <input type="text" placeholder="Nombre completo *" required>
-                <input type="email" placeholder="Correo electrónico *" required>
-                <select>
-                    <option>Selecciona un servicio</option>
-                    <option>Mantenimiento</option>
-                    <option>Reparación</option>
-                </select>
-                <textarea placeholder="Mensaje *" rows="4" required></textarea>
-                <button type="submit" class="btn" style="background-color: #ff5733; width: 100%; border: none;">Enviar Mensaje</button>
-            </form>
-        </div>
-    </section>
-
-    <div id="chat-window" class="chat-floating-window">
-        <div class="chat-header" onclick="toggleChat()">
-            <div class="chat-header-info"><i class="fas fa-robot"></i> <span>Soporte IA</span></div>
-            <i class="fas fa-chevron-up" id="chat-icon-toggle"></i>
-        </div>
-        <div class="chat-body collapsed" id="chat-body">
-            <div class="chat-messages" id="chat-box">
-                <div class="message bot-message">¡Hola! Soy Gemini. ¿Qué problema tiene tu PC hoy?</div>
-            </div>
-            <div class="chat-input">
-                <input type="text" id="chat-input-field" placeholder="Escribe tu duda...">
-                <button id="send-chat-btn"><i class="fas fa-paper-plane"></i></button>
-            </div>
-        </div>
-    </div>
-
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

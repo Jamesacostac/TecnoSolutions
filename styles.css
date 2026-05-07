@@ -1,31 +1,61 @@
-:root {
-    --blue: #345e7e;
-    --orange: #ff5733;
-    --dark: #1e293b;
+/* Estilos para Tutoriales (Manteniendo la paleta de colores de TecnoSolutions) */
+.tutoriales-header {
+    background: var(--primary); /* El color azul que ya usas */
+    color: white;
+    padding: 60px 0;
+    text-align: center;
 }
 
-body { margin: 0; background: #f4f7f9; font-family: sans-serif; }
-.container { max-width: 1100px; margin: auto; padding: 0 20px; }
+.tutorial-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
 
-header { background: var(--blue); color: white; padding: 15px 0; }
-.header-content { display: flex; justify-content: space-between; align-items: center; }
-nav ul { display: flex; list-style: none; gap: 15px; }
-nav a { color: white; text-decoration: none; }
+.btn-tutorial-nav {
+    padding: 10px 20px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--dark);
+    transition: 0.3s;
+    border: 1px solid #ddd;
+}
 
-.hero { background: var(--dark); color: white; padding: 80px 0; text-align: center; }
-.btn-orange { background: var(--orange); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; }
+.btn-tutorial-nav:hover {
+    background: var(--primary);
+    color: white;
+}
 
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; }
-.service-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+.tutorial-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
 
-.tutorial-container { margin-bottom: 20px; border-radius: 8px; overflow: hidden; }
-.tutorial-header { background: var(--dark); color: white; padding: 15px; display: flex; justify-content: space-between; }
-.tutorial-content { background: white; padding: 20px; }
+.card-header {
+    background: var(--light-bg);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--primary);
+}
 
-.contact-section { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin: 40px auto; }
-.contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; }
+.tutorial-details summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 0;
+    list-style: none;
+    color: var(--primary);
+}
 
-.chat-floating-window { position: fixed; bottom: 0; right: 20px; width: 300px; background: var(--dark); color: white; border-radius: 8px 8px 0 0; }
-.chat-body { background: white; color: black; height: 0; overflow: hidden; transition: 0.3s; }
-.chat-body.active { height: 250px; padding: 10px; }
-.hidden { display: none !important; }
+.details-content {
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 0 0 10px 10px;
+}
