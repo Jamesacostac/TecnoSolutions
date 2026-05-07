@@ -1,61 +1,68 @@
-/* Estilos para Tutoriales (Manteniendo la paleta de colores de TecnoSolutions) */
-.tutoriales-header {
-    background: var(--primary); /* El color azul que ya usas */
-    color: white;
-    padding: 60px 0;
-    text-align: center;
+:root {
+    --primary: #2563eb;
+    --secondary: #10b981;
+    --dark: #0f172a;
+    --text: #334155;
+    --light: #f8fafc;
+    --white: #ffffff;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.tutorial-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body { 
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; 
+    background-color: var(--light); 
+    color: var(--text);
+    line-height: 1.6;
 }
 
-.btn-tutorial-nav {
-    padding: 10px 20px;
-    background: #f4f4f4;
-    border-radius: 5px;
-    text-decoration: none;
-    color: var(--dark);
-    transition: 0.3s;
-    border: 1px solid #ddd;
-}
+.container { max-width: 1100px; margin: auto; padding: 0 2rem; }
+.section-padding { padding: 80px 0; }
+.bg-alt { background-color: #f1f5f9; }
 
-.btn-tutorial-nav:hover {
-    background: var(--primary);
-    color: white;
+/* Header & Nav */
+header { 
+    background: var(--white); 
+    padding: 1.2rem 0; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky; top: 0; z-index: 100;
 }
+.header-content { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.6rem; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+nav ul { list-style: none; display: flex; gap: 25px; align-items: center; }
+nav a { text-decoration: none; color: var(--text); font-weight: 600; transition: 0.3s; }
+nav a:hover { color: var(--primary); }
+.btn-nav { background: var(--primary); color: white !important; padding: 8px 20px; border-radius: 6px; }
 
-.tutorial-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    overflow: hidden;
-}
+/* Hero Section */
+.hero { background: var(--white); padding: 100px 0; text-align: center; }
+.badge { background: #dbeafe; color: var(--primary); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; }
+.hero h1 { font-size: 3.5rem; color: var(--dark); margin: 20px 0; line-height: 1.1; }
+.hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; }
 
-.card-header {
-    background: var(--light-bg);
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid var(--primary);
-}
+/* Botones */
+.btn { padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; gap: 10px; transition: 0.3s; }
+.btn-whatsapp { background: var(--secondary); color: white; }
+.btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
+.btn-outline { border: 2px solid var(--primary); color: var(--primary); margin-left: 15px; }
 
-.tutorial-details summary {
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px 0;
-    list-style: none;
-    color: var(--primary);
-}
+/* Features Grid */
+.section-header { text-align: center; margin-bottom: 50px; }
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.feature-card { background: var(--white); padding: 40px; border-radius: 15px; box-shadow: var(--shadow); transition: 0.3s; text-align: center; }
+.feature-card:hover { transform: translateY(-10px); }
+.feature-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
 
-.details-content {
-    padding: 15px;
-    background: #fafafa;
-    border-radius: 0 0 10px 10px;
-}
+/* Chat UI (Unificado con estilo pro) */
+.chat-wrapper { max-width: 700px; margin: 0 auto; background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
+.chat-header { background: var(--dark); color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+.chat-header button { background: transparent; border: none; color: white; cursor: pointer; opacity: 0.7; }
+.chat-box { height: 400px; padding: 25px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; background: #f8fafc; }
+.msg { padding: 12px 18px; border-radius: 15px; max-width: 85%; font-size: 0.95rem; }
+.bot { background: white; align-self: flex-start; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+.user { background: var(--primary); color: white; align-self: flex-end; }
+.chat-input-area { padding: 20px; display: flex; gap: 10px; background: white; border-top: 1px solid #e2e8f0; }
+.chat-input-area input { flex: 1; border: 1px solid #e2e8f0; padding: 12px; border-radius: 8px; outline: none; transition: 0.3s; }
+.chat-input-area input:focus { border-color: var(--primary); }
+.chat-input-area button { background: var(--primary); color: white; border: none; width: 45px; border-radius: 8px; cursor: pointer; }

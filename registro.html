@@ -2,37 +2,48 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Perfil - TecnoSolutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso - TecnoSolutions</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>...</header> <section class="container" style="padding: 50px 0;">
-        <div id="auth-section" class="contact-form" style="max-width: 400px; margin: auto;">
-            <h2>Registro / Login</h2>
-            <form id="loginForm">
-                <input type="text" id="reg-name" placeholder="Nombre" required>
-                <input type="email" id="reg-email" placeholder="Correo" required>
+    <header>
+        <div class="container header-content">
+            <div class="logo"><i class="fas fa-laptop-code"></i> TecnoSolutions</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tutoriales.html">Tutoriales</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="auth-wrapper">
+        <div class="auth-container">
+            <div class="auth-tabs">
+                <button class="tab-btn active" onclick="switchTab('login')">Entrar</button>
+                <button class="tab-btn" onclick="switchTab('register')">Registrarse</button>
+            </div>
+
+            <form id="login-form" class="auth-form active">
+                <h2>Iniciar Sesión</h2>
+                <input type="email" placeholder="Email" required>
                 <input type="password" placeholder="Contraseña" required>
-                <button type="submit" class="btn-orange" style="width:100%">Entrar</button>
+                <button type="submit" class="btn btn-full">Ingresar</button>
+            </form>
+
+            <form id="register-form" class="auth-form">
+                <h2>Crear Cuenta</h2>
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn btn-full">Registrar</button>
             </form>
         </div>
-
-        <div id="profile-section" class="hidden" style="display: grid; grid-template-columns: 1fr 2fr; gap: 30px;">
-            <div class="service-card">
-                <img id="profile-img" src="https://via.placeholder.com/150" style="width:150px; height:150px; border-radius:50%; object-fit:cover;">
-                <input type="file" id="img-upload" style="display:none">
-                <button onclick="document.getElementById('img-upload').click()" class="btn-orange">Cambiar Foto</button>
-                <h3 id="user-display-name">Usuario</h3>
-                <button onclick="logout()" class="btn-orange" style="background:#666">Salir</button>
-            </div>
-            <div class="service-card">
-                <h3>Actualizar Datos</h3>
-                <input type="email" id="update-email" placeholder="Nuevo Correo">
-                <input type="password" placeholder="Nueva Contraseña">
-                <button class="btn-orange">Guardar Cambios</button>
-            </div>
-        </div>
     </section>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -3,165 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecnoSolutions - Tutoriales de Mantenimiento</title>
+    <title>Tutoriales - TecnoSolutions</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <div class="logo">
-                <i class="fas fa-laptop-code"></i>
-                <span>TecnoSolutions</span>
-            </div>
+            <div class="logo"><i class="fas fa-laptop-code"></i> TecnoSolutions</div>
             <nav>
-                <ul id="main-nav">
-                    <li><a href="index.html#inicio">Inicio</a></li>
-                    <li><a href="index.html#servicios">Servicios</a></li>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="tutoriales.html">Tutoriales</a></li>
-                    <li><a href="#" onclick="checkAuth('Soporte Presencial')"><i class="fas fa-lock"></i> Soporte Presencial</a></li>
-                    <li id="nav-auth"><a href="registro.html" class="nav-button">Acceder</a></li>
+                    <li><a href="registro.html">Registro</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="tutoriales-header">
+    <section class="tutorial-header-bg">
         <div class="container">
-            <h1>Tutoriales de Mantenimiento Paso a Paso</h1>
-            <p>Aprende a mantener y limpiar tus dispositivos con nuestras guías detalladas.</p>
+            <h1>Guías Paso a Paso</h1>
+            <p>Instrucciones detalladas para el cuidado de tus equipos.</p>
         </div>
     </section>
 
-    <section class="tutorial-container container">
-        <div class="tutorial-nav">
-            <a href="#laptop-tutorials" class="btn-tutorial-nav"><i class="fas fa-laptop"></i> Laptops</a>
-            <a href="#smartphone-tutorials" class="btn-tutorial-nav"><i class="fas fa-mobile-alt"></i> Smartphones</a>
-            <a href="#console-tutorials" class="btn-tutorial-nav"><i class="fas fa-gamepad"></i> Consolas</a>
-        </div>
-
-        <h2 id="laptop-tutorials" class="tutorial-category-title"><i class="fas fa-laptop-code"></i> Tutoriales para Laptops y PC</h2>
+    <div class="container section-padding">
         <div class="tutorial-grid">
-            <div class="tutorial-card">
-                <div class="card-header">
-                    <h3>Limpieza Profunda de Laptop</h3>
-                    <i class="fas fa-tools"></i>
+            <div class="tutorial-card-full">
+                <div class="card-header-main">
+                    <h3>Limpieza de Laptop</h3>
+                    <i class="fas fa-laptop"></i>
                 </div>
-                <div class="card-content">
-                    <p>Guía detallada para limpiar tu laptop y reemplazo de pasta térmica.</p>
-                    <details class="tutorial-details">
-                        <summary>Ver Materiales y Pasos <i class="fas fa-chevron-down"></i></summary>
-                        <div class="details-content">
+                <div class="card-body-text">
+                    <details>
+                        <summary>Ver Materiales y Procedimiento</summary>
+                        <div class="details-inner">
                             <h4>Materiales</h4>
-                            <ul class="materiales-list">
-                                <li>Aire comprimido y Alcohol isopropílico.</li>
-                                <li>Paños de microfibra y Pasta térmica.</li>
+                            <ul>
+                                <li>Alcohol Isopropílico y Aire comprimido.</li>
+                                <li>Paño de Microfibra.</li>
                             </ul>
                             <h4>Pasos</h4>
-                            <ol class="pasos-list">
-                                <li><strong>Seguridad:</strong> Apaga y desconecta la batería.</li>
-                                <li><strong>Interna:</strong> Limpia ventiladores con aire comprimido.</li>
-                                <li><strong>Térmica:</strong> Cambia la pasta si tiene más de 2 años.</li>
+                            <ol>
+                                <li>Apaga el equipo y retira la batería.</li>
+                                <li>Usa aire comprimido en los ventiladores.</li>
+                                <li>Limpia la pantalla con el paño levemente humedecido.</li>
                             </ol>
                         </div>
                     </details>
                 </div>
-            </div>
-
-            <div class="tutorial-card">
-                <div class="card-header">
-                    <h3>Optimización de Windows</h3>
-                    <i class="fas fa-tachometer-alt"></i>
-                </div>
-                <div class="card-content">
-                    <p>Mejora el rendimiento de tu sistema operativo al máximo.</p>
-                    <details class="tutorial-details">
-                        <summary>Ver Pasos de Optimización <i class="fas fa-chevron-down"></i></summary>
-                        <div class="details-content">
-                            <ol class="pasos-list">
-                                <li>Desinstala programas innecesarios.</li>
-                                <li>Limpia archivos temporales y desactiva apps de inicio.</li>
-                            </ol>
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </div>
-
-        <h2 id="smartphone-tutorials" class="tutorial-category-title"><i class="fas fa-mobile-alt"></i> Tutoriales para Smartphones</h2>
-        <div class="tutorial-grid">
-            <div class="tutorial-card">
-                <div class="card-header">
-                    <h3>Limpieza y Desinfección</h3>
-                    <i class="fas fa-spray-can"></i>
-                </div>
-                <div class="card-content">
-                    <p>Mantén tu teléfono libre de gérmenes y suciedad en puertos.</p>
-                    <details class="tutorial-details">
-                        <summary>Ver Pasos <i class="fas fa-chevron-down"></i></summary>
-                        <div class="details-content">
-                            <ol class="pasos-list">
-                                <li>Limpia la pantalla con microfibra y alcohol al 70%.</li>
-                                <li>Usa palillos de dientes para pelusa en el puerto de carga.</li>
-                            </ol>
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </div>
-
-        <h2 id="console-tutorials" class="tutorial-category-title"><i class="fas fa-gamepad"></i> Consolas de Videojuegos</h2>
-        <div class="tutorial-grid">
-            <div class="tutorial-card">
-                <div class="card-header">
-                    <h3>Limpieza General de Consola</h3>
-                    <i class="fas fa-fan"></i>
-                </div>
-                <div class="card-content">
-                    <p>Evita el sobrecalentamiento limpiando las rejillas de ventilación.</p>
-                    <details class="tutorial-details">
-                        <summary>Ver Pasos <i class="fas fa-chevron-down"></i></summary>
-                        <div class="details-content">
-                            <ol class="pasos-list">
-                                <li>Usa aire comprimido en las rejillas laterales.</li>
-                                <li>No bloquees las salidas de aire al jugar.</li>
-                            </ol>
-                        </div>
-                    </details>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-col">
-                <div class="footer-logo"><i class="fas fa-laptop-code"></i> TecnoSolutions</div>
-                <p>Tu aliado en mantenimiento tecnológico.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Contacto</h4>
-                <ul>
-                    <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
-                    <li><i class="fas fa-envelope"></i> soporte@tecnosolutions.com</li>
-                </ul>
-            </div>
-        </div>
-        <div class="copyright">&copy; 2024 TecnoSolutions.</div>
-    </footer>
-
-    <div id="chat-window" class="chat-floating-window">
-        <div class="chat-header" onclick="toggleChat()">
-            <span><i class="fas fa-robot"></i> Soporte IA</span>
-            <i class="fas fa-chevron-up" id="chat-icon-toggle"></i>
-        </div>
-        <div class="chat-body collapsed" id="chat-body">
-            <div class="chat-messages" id="chat-box">
-                <div class="message bot-message">¡Hola! ¿Dudas sobre algún tutorial?</div>
-            </div>
-            <div class="chat-input">
-                <input type="text" id="chat-input-field" placeholder="Escribe...">
-                <button id="send-chat-btn"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </div>
