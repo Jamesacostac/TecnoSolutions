@@ -2,48 +2,32 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceso - TecnoSolutions</title>
+    <title>Acceso | TecnoSolutions</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <div class="logo"><i class="fas fa-laptop-code"></i> TecnoSolutions</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="tutoriales.html">Tutoriales</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="auth-wrapper">
-        <div class="auth-container">
-            <div class="auth-tabs">
-                <button class="tab-btn active" onclick="switchTab('login')">Entrar</button>
-                <button class="tab-btn" onclick="switchTab('register')">Registrarse</button>
-            </div>
-
-            <form id="login-form" class="auth-form active">
-                <h2>Iniciar Sesión</h2>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Contraseña" required>
-                <button type="submit" class="btn btn-full">Ingresar</button>
+    <div class="auth-page">
+        <div class="auth-card">
+            <h2>Crear Cuenta</h2>
+            <p>Únete a nuestra comunidad técnica</p>
+            <form onsubmit="handleRegistration(event)">
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="reg-name" placeholder="Ej: Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" id="reg-email" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" placeholder="Mínimo 8 caracteres" required minlength="8">
+                </div>
+                <button type="submit" class="btn-submit">Registrarse Ahora</button>
             </form>
-
-            <form id="register-form" class="auth-form">
-                <h2>Crear Cuenta</h2>
-                <input type="text" placeholder="Nombre completo" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Contraseña" required>
-                <button type="submit" class="btn btn-full">Registrar</button>
-            </form>
+            <p style="margin-top:20px; font-size: 0.9rem;">¿Ya tienes cuenta? <a href="#" style="color: var(--primary);">Inicia Sesión</a></p>
         </div>
-    </section>
-
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

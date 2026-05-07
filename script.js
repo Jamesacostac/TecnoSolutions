@@ -1,48 +1,83 @@
-// Diagnóstico Inteligente por Chat
+// --- MANEJO DE SESIÓN (LOGIN -> CUENTA) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const authContainer = document.getElementById('auth-btn-container');
+    const session = JSON.parse(localStorage.getItem('userSession'));
+
+    // Si el usuario está logueado, cambiamos el botón
+    if (session && authContainer) {
+        authContainer.innerHTML = `<a href="perfil.html" class="btn-nav" style="background: #10b981;">Mi Cuenta</a>`;
+    }
+});
+
+function handleRegistration(e) {
+    e.preventDefault();
+    const name = document.getElementById('reg-name').value;
+    const email = document.getElementById('reg-email').value;
+
+    // Guardamos la sesión localmente
+    localStorage.setItem('userSession', JSON.stringify({ name, email }));
+    
+    alert("¡Cuenta creada con éxito! Redirigiendo al inicio.");
+    window.location.href = "index.html";
+}
+
+function logout() {
+    localStorage.removeItem('userSession');
+    window.location.href = "index.html";
+}
+
+// --- CHAT FLOTANTE IA ---
+function toggleChat() {
+    const window = document.getElementById('chat-window');
+    window.classList.toggle('active');
+}
+
 function handleChat() {
     const input = document.getElementById('user-input');
-    const box = document.getElementById('chat-box');
-    const val = input.value.trim().toLowerCase();
-    
-    if (!val) return;
+    const chatBox = document.getElementById('chat-box');
+    const message = input.value.trim();
 
-    // Agregar mensaje de usuario
-    addMessage(input.value, 'user');
-    input.value = "";
+    if (!message) return;
 
-    // Simular "pensamiento" del bot
+    // Agregar mensaje del usuario
+    addMessageToChat(message, 'user');
+    input.value = '';
+
+    // Respuesta IA Simulada
     setTimeout(() => {
-        let response = "Interesante. Para darte un presupuesto exacto, ¿podrías decirme la marca y modelo de tu equipo?";
+        let response = "Interesante. Para darte un diagnóstico preciso de " + message + ", ¿me podrías decir si el equipo se calienta o hace ruidos extraños?";
         
-        if (val.includes("calienta") || val.includes("apaga")) {
-            response = "Eso suena a problemas de ventilación o pasta térmica seca. Recomendamos un mantenimiento preventivo urgente para evitar daños en el procesador.";
-        } else if (val.includes("pantalla") || val.includes("roto")) {
-            response = "Las reparaciones de pantalla dependen del stock. Si nos dices el modelo, podemos cotizarte el repuesto original ahora mismo.";
-        } else if (val.includes("agua") || val.includes("mojo")) {
-            response = "¡Peligro! No intentes encenderlo. Tráelo de inmediato para una limpieza por ultrasonido y evitar la corrosión.";
-        } else if (val.includes("hola")) {
-            response = "¡Hola! Soy el asistente de TecnoSolutions. ¿Qué problema presenta tu dispositivo hoy?";
+        if (message.toLowerCase().includes("lento")) {
+            response = "Si tu equipo está lento, lo primero es revisar el Administrador de Tareas (Ctrl+Shift+Esc) para ver qué consume recursos. ¿Has limpiado los archivos temporales recientemente?";
+        } else if (message.toLowerCase().includes("pantalla")) {
+            response = "Los problemas de pantalla pueden ser físicos (flex o panel) o de software (drivers de video). ¿Aparecen rayas o se queda en negro?";
         }
 
-        addMessage(response, 'bot');
+        addMessageToChat(response, 'bot');
     }, 800);
 }
 
-function addMessage(text, side) {
-    const box = document.getElementById('chat-box');
-    const msg = document.createElement('div');
-    msg.className = `msg ${side}`;
-    msg.textContent = text;
-    box.appendChild(msg);
-    box.scrollTop = box.scrollHeight;
+function addMessageToChat(text, type) {
+    const chatBox = document.getElementById('chat-box');
+    const msgDiv = document.createElement('div');
+    
+    msgDiv.style.padding = "10px 15px";
+    msgDiv.style.borderRadius = "15px";
+    msgDiv.style.maxWidth = "85%";
+    msgDiv.style.fontSize = "0.9rem";
+    msgDiv.style.marginBottom = "10px";
+    
+    if (type === 'user') {
+        msgDiv.style.background = "#2563eb";
+        msgDiv.style.color = "white";
+        msgDiv.style.alignSelf = "flex-end";
+    } else {
+        msgDiv.style.background = "#e2e8f0";
+        msgDiv.style.color = "#0f172a";
+        msgDiv.style.alignSelf = "flex-start";
+    }
+    
+    msgDiv.textContent = text;
+    chatBox.appendChild(msgDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
-
-function clearChat() {
-    const box = document.getElementById('chat-box');
-    box.innerHTML = '<div class="msg bot">Chat reiniciado. ¿En qué más puedo ayudarte?</div>';
-}
-
-// Escuchar tecla Enter
-document.getElementById('user-input')?.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') handleChat();
-});
