@@ -6,28 +6,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="auth-page">
-        <div class="auth-card">
-            <h2>Crear Cuenta</h2>
-            <p>Únete a nuestra comunidad técnica</p>
+    <section class="container section-padding">
+        <div class="comment-form-card" style="max-width: 400px; margin: auto;">
+            <h2 class="center-text">Crear Cuenta</h2>
             <form onsubmit="handleRegistration(event)">
-                <div class="form-group">
-                    <label>Nombre Completo</label>
-                    <input type="text" id="reg-name" placeholder="Ej: Juan Pérez" required>
-                </div>
-                <div class="form-group">
-                    <label>Correo Electrónico</label>
-                    <input type="email" id="reg-email" placeholder="correo@ejemplo.com" required>
-                </div>
-                <div class="form-group">
-                    <label>Contraseña</label>
-                    <input type="password" placeholder="Mínimo 8 caracteres" required minlength="8">
-                </div>
-                <button type="submit" class="btn-submit">Registrarse Ahora</button>
+                <input type="text" id="reg-name" placeholder="Nombre completo" class="form-input" required>
+                <input type="email" id="reg-email" placeholder="Correo electrónico" class="form-input" required>
+                <button type="submit" class="btn-submit">Registrarse e Ingresar</button>
             </form>
-            <p style="margin-top:20px; font-size: 0.9rem;">¿Ya tienes cuenta? <a href="#" style="color: var(--primary);">Inicia Sesión</a></p>
         </div>
-    </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html>

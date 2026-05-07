@@ -4,41 +4,30 @@
     <meta charset="UTF-8">
     <title>Mi Perfil | TecnoSolutions</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <a href="index.html" class="logo" style="text-decoration:none"><i class="fas fa-laptop-code"></i> TecnoSolutions</a>
+    <header><div class="container header-content"><a href="index.html" class="logo">TecnoSolutions</a><div id="auth-btn-container"></div></div></header>
+    <section class="container section-padding">
+        <div class="profile-card">
+            <div class="profile-header">
+                <i class="fas fa-user-circle" style="font-size: 80px; color: #2563eb;"></i>
+                <h2 id="display-name" style="margin: 15px 0;">Usuario</h2>
+                <p id="display-email">correo@ejemplo.com</p>
+            </div>
+            <div class="profile-body">
+                <button class="btn-submit" onclick="cerrarSesion()" style="background: #ef4444;">Cerrar Sesión</button>
+            </div>
         </div>
-    </header>
-
-    <div class="container section-padding" style="max-width: 600px;">
-        <div class="comment-form-card">
-            <h2 style="text-align:center; margin-bottom: 20px;">Mi Cuenta</h2>
-            <form onsubmit="alert('Datos actualizados'); return false;">
-                <div class="form-group">
-                    <label>Nombre</label>
-                    <input type="text" id="prof-name">
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" id="prof-email">
-                </div>
-                <button type="submit" class="btn-submit" style="background: var(--primary);">Guardar Cambios</button>
-                <button type="button" onclick="logout()" class="btn-submit" style="background: #ef4444; margin-top: 10px;">Cerrar Sesión</button>
-            </form>
-        </div>
-    </div>
+    </section>
     <script src="script.js"></script>
     <script>
-        // Cargar datos del perfil
-        const user = JSON.parse(localStorage.getItem('userSession'));
-        if(user) {
-            document.getElementById('prof-name').value = user.name;
-            document.getElementById('prof-email').value = user.email;
-        } else {
-            location.href = 'index.html';
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = JSON.parse(localStorage.getItem('userSession'));
+            if (!user) window.location.href = "registro.html";
+            document.getElementById('display-name').textContent = user.name;
+            document.getElementById('display-email').textContent = user.email;
+        });
     </script>
 </body>
 </html>

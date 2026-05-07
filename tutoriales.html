@@ -2,83 +2,45 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tutoriales - TecnoSolutions</title>
+    <title>Tutoriales Técnicos | TecnoSolutions</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <div class="logo"><i class="fas fa-laptop-code"></i> TecnoSolutions</div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="tutoriales.html">Tutoriales</a></li>
-                    <li id="auth-btn-container"><a href="registro.html" class="btn-nav">Login / Registro</a></li>
-                </ul>
-            </nav>
+            <a href="index.html" class="logo">TecnoSolutions</a>
+            <nav><ul><li><a href="index.html">Inicio</a></li><li><a href="videos.html">Videos</a></li><li id="auth-btn-container"></li></ul></nav>
         </div>
     </header>
 
     <section class="container section-padding">
-        <h1 class="center-text">Tutoriales de Mantenimiento Paso a Paso</h1>
+        <h1 class="center-text">Manuales de Mantenimiento Preventivo</h1>
         
-        <div class="category-filters">
-            <button class="cat-btn"><i class="fas fa-laptop"></i> Laptops</button>
-            <button class="cat-btn"><i class="fas fa-mobile-alt"></i> Smartphones</button>
-            <button class="cat-btn"><i class="fas fa-gamepad"></i> Consolas</button>
-        </div>
-
-        <h2 class="section-subtitle"><i class="fas fa-laptop"></i> Tutoriales para Laptops y PC</h2>
-
-        <div class="accordion-container">
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="header-left">
-                        <i class="fas fa-tools icon-bg"></i>
-                        <div>
-                            <h3>Limpieza Profunda de Laptop (Interna y Externa)</h3>
-                            <p>Guía para limpiar tu equipo y reemplazar pasta térmica.</p>
-                        </div>
-                    </div>
-                    <span class="view-link">Ver Materiales y Pasos <i class="fas fa-chevron-down"></i></span>
+        <div class="tutorial-stack">
+            <div class="tutorial-item">
+                <div class="item-header">
+                    <h2>Mantenimiento Interno de Laptop</h2>
                 </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <h4>Materiales:</h4>
-                        <ul class="material-list">
-                            <li>Alcohol Isopropílico</li>
-                            <li>Aire Comprimido</li>
-                            <li>Pasta Térmica</li>
-                        </ul>
-                        <h4>Pasos:</h4>
-                        <div class="step"><span class="step-num">1</span> Retira la batería y tornillos traseros.</div>
-                        <div class="step"><span class="step-num">2</span> Limpia el polvo del ventilador con aire comprimido.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="header-left">
-                        <i class="fas fa-tachometer-alt icon-bg-red"></i>
-                        <div>
-                            <h3>Optimización de Windows 10/11</h3>
-                            <p>Acelera el sistema al máximo.</p>
-                        </div>
-                    </div>
-                    <span class="view-link">Ver Pasos <i class="fas fa-chevron-down"></i></span>
-                </div>
-                <div class="accordion-content">
-                    <div class="content-inner">
-                        <div class="step"><span class="step-num">1</span> Deshabilita programas de inicio (Task Manager).</div>
-                        <div class="step"><span class="step-num">2</span> Borra archivos temporales de la carpeta %temp%.</div>
-                    </div>
+                <div class="item-body">
+                    <h3><i class="fas fa-briefcase"></i> Materiales:</h3>
+                    <ul class="material-list">
+                        <li>Juego de destornilladores de precisión (Estrella y Torx).</li>
+                        <li>Alcohol isopropílico (Pureza 99%).</li>
+                        <li>Pasta térmica (Arctic MX-4 o Thermal Grizzly).</li>
+                        <li>Aire comprimido y brocha antiestática.</li>
+                    </ul>
+                    <hr>
+                    <h3><i class="fas fa-list-ol"></i> Paso a Paso:</h3>
+                    <div class="step"><span>1</span><p><strong>Apertura:</strong> Retira los tornillos de la carcasa inferior y usa una palanca de plástico para abrir los clips sin dañar el chasis.</p></div>
+                    <div class="step"><span>2</span><p><strong>Desconexión:</strong> Ubica la batería y desconecta el flex que va a la tarjeta madre. ¡Este paso es vital para no quemar componentes!</p></div>
+                    <div class="step"><span>3</span><p><strong>Ventilación:</strong> Retira el ventilador y el disipador. Usa aire comprimido para sacar el polvo acumulado en las rejillas.</p></div>
+                    <div class="step"><span>4</span><p><strong>Cambio de Pasta:</strong> Limpia la pasta vieja con alcohol. Aplica una cantidad del tamaño de un grano de arroz en el procesador.</p></div>
+                    <div class="step"><span>5</span><p><strong>Cierre:</strong> Vuelve a conectar todo, atornilla el disipador en el orden numérico marcado y cierra el equipo.</p></div>
                 </div>
             </div>
         </div>
     </section>
-
     <script src="script.js"></script>
 </body>
 </html>
