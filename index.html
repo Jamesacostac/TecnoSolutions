@@ -54,29 +54,6 @@
         </div>
     </section>
 
-    <section class="bg-alt section-padding">
-        <div class="container">
-            <h2 class="center-text">Nuestros Servicios</h2>
-            <div class="grid-3">
-                <div class="info-card">
-                    <i class="fas fa-tools blue-icon"></i>
-                    <h3>Preventivo</h3>
-                    <p>Limpieza profunda de hardware y cambio de pasta térmica.</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-bug blue-icon"></i>
-                    <h3>Seguridad</h3>
-                    <p>Eliminación de virus y optimización de software avanzada.</p>
-                </div>
-                <div class="info-card">
-                    <i class="fas fa-microchip blue-icon"></i>
-                    <h3>Upgrades</h3>
-                    <p>Instalación de discos SSD y expansión de memoria RAM.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="contacto" class="container section-padding">
         <div class="contact-wrapper">
             <div class="contact-info">
@@ -93,7 +70,7 @@
                     <textarea placeholder="Agrega tu comentario..." class="form-input" rows="4" required></textarea>
                     <div class="data-privacy">
                         <input type="checkbox" id="privacy" required>
-                        <label for="privacy">Acepto el tratamiento de mis datos personales.</label>
+                        <label for="privacy">Acepto el tratamiento de datos.</label>
                     </div>
                     <button type="submit" class="btn-submit-pro">Enviar Mensaje</button>
                 </form>
@@ -104,10 +81,10 @@
     <div class="ai-assistant" id="ai-chat">
         <div class="chat-header">Asistente IA TecnoSolutions</div>
         <div class="chat-body" id="chat-content">
-            <p>¡Hola! 👋 Soy tu asistente virtual. ¿Qué falla presenta tu equipo hoy?</p>
+            <div class="ai-msg">¡Hola! 👋 Soy tu técnico virtual. ¿Qué equipo falla hoy? (PC, Celular o Consola)</div>
         </div>
         <div class="chat-footer">
-            <input type="text" placeholder="Escribe tu duda técnica...">
+            <input type="text" id="chat-input" placeholder="Escribe tu problema aquí..." onkeypress="handleChat(event)">
         </div>
     </div>
     <button class="ai-toggle" onclick="toggleChat()"><i class="fas fa-robot"></i></button>
@@ -116,7 +93,7 @@
         <div class="container footer-grid">
             <div class="footer-col">
                 <div class="logo-footer"><i class="fas fa-laptop-code"></i> TecnoSolutions</div>
-                <p>Expertos en soporte técnico digital. Brindamos soluciones rápidas y garantizadas para todos tus dispositivos.</p>
+                <p>Expertos en soporte técnico digital. Brindamos soluciones rápidas y garantizadas.</p>
                 <div class="social-links">
                     <i class="fab fa-facebook"></i> <i class="fab fa-instagram"></i> <i class="fab fa-whatsapp"></i>
                 </div>
@@ -133,12 +110,9 @@
                 <h4>Contacto</h4>
                 <p><i class="fas fa-envelope blue-icon-small"></i> soporte@tecnosolutions.com</p>
                 <p><i class="fas fa-phone blue-icon-small"></i> +1 234 567 8900</p>
-                <p><i class="fas fa-map-marker-alt blue-icon-small"></i> Sede Central, Ciudad</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 TecnoSolutions. Todos los derechos reservados.</p>
-        </div>
+        <div class="footer-bottom"><p>&copy; 2026 TecnoSolutions.</p></div>
     </footer>
 
     <script src="script.js"></script>

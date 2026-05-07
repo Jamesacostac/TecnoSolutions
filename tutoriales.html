@@ -8,7 +8,6 @@
 </head>
 <body>
     <header><div class="container header-content"><a href="index.html" class="logo">TecnoSolutions</a><nav><ul><li><a href="index.html">Inicio</a></li><li><a href="videos.html">Videos</a></li><li id="auth-btn-container"></li></ul></nav></div></header>
-
     <section class="container section-padding">
         <h1 class="center-text">Tutoriales Paso a Paso</h1>
         <div class="category-filters">
@@ -17,40 +16,15 @@
             <button class="filter-btn" onclick="filterTutorials('consola')">Consolas</button>
             <button class="filter-btn active" onclick="filterTutorials('all')">Ver Todos</button>
         </div>
-
         <div class="accordion-container">
-            <details class="manual-item laptop">
-                <summary><div class="summary-content"><div class="icon-box-small orange"><i class="fas fa-fan"></i></div><h3>Limpiar Ventiladores</h3></div></summary>
-                <div class="details-body">1. Abre la tapa. 2. Usa aire comprimido. 3. Limpia las aspas con un pincel.</div>
-            </details>
-            <details class="manual-item laptop">
-                <summary><div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-rocket"></i></div><h3>Acelerar Windows</h3></div></summary>
-                <div class="details-body">Desactiva programas de inicio en el Administrador de Tareas.</div>
-            </details>
-            <details class="manual-item laptop">
-                <summary><div class="summary-content"><div class="icon-box-small orange"><i class="fas fa-microchip"></i></div><h3>Cambio Pasta Térmica</h3></div></summary>
-                <div class="details-body">Limpia el procesador y aplica una gota de pasta térmica nueva.</div>
-            </details>
-            <details class="manual-item smartphone">
-                <summary><div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-bolt"></i></div><h3>Puerto de Carga</h3></div></summary>
-                <div class="details-body">Usa un palillo de madera para quitar la pelusa del puerto USB-C.</div>
-            </details>
-            <details class="manual-item smartphone">
-                <summary><div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-battery-half"></i></div><h3>Ahorro de Batería</h3></div></summary>
-                <div class="details-body">Reduce el brillo y desactiva la actualización en segundo plano.</div>
-            </details>
-            <details class="manual-item smartphone">
-                <summary><div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-sync"></i></div><h3>Respaldo Total</h3></div></summary>
-                <div class="details-body">Sincroniza tus contactos y fotos con Google Drive o iCloud.</div>
-            </details>
-            <details class="manual-item consola">
-                <summary><div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-gamepad"></i></div><h3>Limpieza PS5</h3></div></summary>
-                <div class="details-body">Quita las carcasas blancas y aspira los agujeros colectores de polvo.</div>
-            </details>
-            <details class="manual-item consola">
-                <summary><div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-network-wired"></i></div><h3>Bajar el Ping</h3></div></summary>
-                <div class="details-body">Conecta tu consola por cable LAN en lugar de usar Wi-Fi.</div>
-            </details>
+            <details class="manual-item laptop"><summary><div class="summary-content"><div class="icon-box-small orange"><i class="fas fa-fan"></i></div><h3>Limpiar Ventiladores</h3></div></summary><div class="details-body">Remueve el polvo con aire comprimido.</div></details>
+            <details class="manual-item laptop"><summary><div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-rocket"></i></div><h3>Acelerar Windows</h3></div></summary><div class="details-body">Limpia temporales y apps de inicio.</div></details>
+            <details class="manual-item laptop"><summary><div class="summary-content"><div class="icon-box-small orange"><i class="fas fa-microchip"></i></div><h3>Pasta Térmica</h3></div></summary><div class="details-body">Aplica Arctic MX-6 para bajar temperatura.</div></details>
+            <details class="manual-item smartphone"><summary><div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-bolt"></i></div><h3>Puerto Carga</h3></div></summary><div class="details-body">Limpia pelusas con palillo de madera.</div></details>
+            <details class="manual-item smartphone"><summary><div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-sync"></i></div><h3>Respaldo</h3></div></summary><div class="details-body">Usa la nube para tus fotos.</div></details>
+            <details class="manual-item smartphone"><summary><div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-mobile-alt"></i></div><h3>Pantalla</h3></div></summary><div class="details-body">Limpieza con microfibra.</div></details>
+            <details class="manual-item consola"><summary><div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-gamepad"></i></div><h3>Polvo PS5</h3></div></summary><div class="details-body">Aspira colectores de polvo.</div></details>
+            <details class="manual-item consola"><summary><div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-wifi"></i></div><h3>Red Lag</h3></div></summary><div class="details-body">Usa cable Ethernet.</div></details>
         </div>
     </section>
     <script src="script.js"></script>

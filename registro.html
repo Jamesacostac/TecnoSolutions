@@ -8,20 +8,15 @@
 <body class="bg-alt">
     <div class="container section-padding">
         <div class="auth-card">
-            <h2 class="center-text">Bienvenido</h2>
-            <p class="center-text">Regístrate para guardar tus tutoriales favoritos.</p>
+            <h2 class="center-text">Crear Cuenta</h2>
             <form onsubmit="handleRegistration(event)">
-                <div class="form-group">
-                    <label>Nombre de Usuario</label>
-                    <input type="text" id="reg-name" class="form-input" placeholder="Tu nombre..." required>
+                <div style="margin-bottom:20px">
+                    <label>Nombre completo</label>
+                    <input type="text" id="reg-name" class="form-input" required placeholder="Ej. Juan Pérez">
                 </div>
-                <div class="form-group">
-                    <label>Contraseña</label>
-                    <input type="password" class="form-input" placeholder="******" required>
-                </div>
-                <button type="submit" class="btn-submit-pro">Entrar / Registrarse</button>
+                <button type="submit" class="btn-submit-pro">Registrarse</button>
             </form>
-            <p class="center-text" style="margin-top:15px"><a href="index.html">Volver al inicio</a></p>
+            <p class="center-text" style="margin-top:20px"><a href="index.html">Volver</a></p>
         </div>
     </div>
     <script src="script.js"></script>
