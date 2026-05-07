@@ -2,21 +2,45 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro | TecnoSolutions</title>
+    <title>Acceso | TecnoSolutions</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-alt">
     <div class="container section-padding">
-        <div class="auth-card">
-            <h2 class="center-text">Crear Cuenta</h2>
-            <form onsubmit="handleRegistration(event)">
-                <div style="margin-bottom:20px">
-                    <label>Nombre completo</label>
-                    <input type="text" id="reg-name" class="form-input" required placeholder="Ej. Juan Pérez">
-                </div>
-                <button type="submit" class="btn-submit-pro">Registrarse</button>
+        <div id="auth-forms" class="auth-card" style="max-width: 400px; margin: auto; background: white; padding: 30px; border-radius: 15px;">
+            <div id="register-section">
+                <h2>Crear Cuenta</h2>
+                <form onsubmit="handleAuth(event, 'register')">
+                    <input type="text" id="reg-name" class="form-input" placeholder="Nombre" required>
+                    <input type="email" id="reg-email" class="form-input" placeholder="Correo" required>
+                    <input type="password" id="reg-pass" class="form-input" placeholder="Contraseña" required>
+                    <button type="submit" class="btn-submit-pro">Registrarse</button>
+                </form>
+                <p onclick="toggleAuth()" class="auth-link">¿Ya tienes cuenta? Login</p>
+            </div>
+            <div id="login-section" style="display:none;">
+                <h2>Iniciar Sesión</h2>
+                <form onsubmit="handleAuth(event, 'login')">
+                    <input type="email" id="log-email" class="form-input" placeholder="Correo" required>
+                    <input type="password" id="log-pass" class="form-input" placeholder="Contraseña" required>
+                    <button type="submit" class="btn-submit-pro">Entrar</button>
+                </form>
+                <p onclick="toggleAuth()" class="auth-link">¿No tienes cuenta? Registro</p>
+            </div>
+        </div>
+
+        <div id="profile-section" class="auth-card" style="display:none; max-width: 400px; margin: auto; background: white; padding: 30px; border-radius: 15px;">
+            <h2>Mi Perfil</h2>
+            <form onsubmit="handleUpdate(event)">
+                <label>Nombre:</label>
+                <input type="text" id="upd-name" class="form-input" required>
+                <label>Correo:</label>
+                <input type="email" id="upd-email" class="form-input" required>
+                <label>Nueva Contraseña:</label>
+                <input type="password" id="upd-pass" class="form-input" placeholder="Dejar en blanco para no cambiar">
+                <button type="submit" class="btn-submit-pro" style="background:#10b981">Guardar Cambios</button>
             </form>
-            <p class="center-text" style="margin-top:20px"><a href="index.html">Volver</a></p>
+            <button onclick="window.location.href='index.html'" class="btn-submit-pro" style="background:#64748b; margin-top:10px">Volver</button>
         </div>
     </div>
     <script src="script.js"></script>

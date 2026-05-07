@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecnoSolutions | Soporte Técnico Profesional</title>
+    <title>TecnoSolutions | Soporte Técnico</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -39,17 +39,40 @@
             <div class="info-card">
                 <i class="fas fa-award blue-icon"></i>
                 <h3>Calidad Garantizada</h3>
-                <p>Usamos repuestos originales y materiales premium como Arctic MX-6.</p>
+                <p>Repuestos originales y materiales premium como Arctic MX-6.</p>
             </div>
             <div class="info-card">
                 <i class="fas fa-user-clock blue-icon"></i>
-                <h3>Rapidez y Eficiencia</h3>
-                <p>Diagnósticos veloces para que recuperes tu equipo en tiempo récord.</p>
+                <h3>Servicio Express</h3>
+                <p>Diagnósticos veloces para que recuperes tu equipo rápido.</p>
             </div>
             <div class="info-card">
                 <i class="fas fa-shield-alt blue-icon"></i>
-                <h3>Seguridad de Datos</h3>
-                <p>Privacidad total y protocolos seguros en el manejo de tu información.</p>
+                <h3>Seguridad</h3>
+                <p>Protocolos seguros en el manejo de tu información personal.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-alt section-padding">
+        <div class="container">
+            <h2 class="center-text">Nuestros Servicios</h2>
+            <div class="grid-3">
+                <div class="info-card">
+                    <i class="fas fa-tools blue-icon"></i>
+                    <h3>Mantenimiento Preventivo</h3>
+                    <p>Limpieza profunda de hardware y cambio de pasta térmica.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-bug blue-icon"></i>
+                    <h3>Seguridad y Limpieza</h3>
+                    <p>Eliminación de virus, malware y optimización de software.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-microchip blue-icon"></i>
+                    <h3>Upgrades de Hardware</h3>
+                    <p>Instalación de discos SSD y expansión de memoria RAM.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -58,20 +81,14 @@
         <div class="contact-wrapper">
             <div class="contact-info">
                 <h2>Agenda tu cita</h2>
-                <p>¿Problemas técnicos? Habla directamente con nosotros por WhatsApp.</p>
-                <a href="https://wa.me/1234567890" class="btn-whatsapp-large">
-                    <i class="fab fa-whatsapp"></i> Agendar vía WhatsApp
-                </a>
+                <p>¿Problemas técnicos? Habla directamente por WhatsApp.</p>
+                <a href="https://wa.me/1234567890" class="btn-whatsapp-large"><i class="fab fa-whatsapp"></i> Agendar vía WhatsApp</a>
             </div>
             <div class="comment-form-card">
                 <h3>Envíanos un mensaje</h3>
                 <form id="commentForm">
                     <input type="text" placeholder="Tu nombre" class="form-input" required>
-                    <textarea placeholder="Agrega tu comentario..." class="form-input" rows="4" required></textarea>
-                    <div class="data-privacy">
-                        <input type="checkbox" id="privacy" required>
-                        <label for="privacy">Acepto el tratamiento de datos.</label>
-                    </div>
+                    <textarea placeholder="Descripción del problema..." class="form-input" rows="4" required></textarea>
                     <button type="submit" class="btn-submit-pro">Enviar Mensaje</button>
                 </form>
             </div>
@@ -79,12 +96,12 @@
     </section>
 
     <div class="ai-assistant" id="ai-chat">
-        <div class="chat-header">Asistente IA TecnoSolutions</div>
+        <div class="chat-header">Asistente IA</div>
         <div class="chat-body" id="chat-content">
-            <div class="ai-msg">¡Hola! 👋 Soy tu técnico virtual. ¿Qué equipo falla hoy? (PC, Celular o Consola)</div>
+            <div class="ai-msg">¡Hola! 👋 ¿En qué dispositivo tienes problemas hoy?</div>
         </div>
         <div class="chat-footer">
-            <input type="text" id="chat-input" placeholder="Escribe tu problema aquí..." onkeypress="handleChat(event)">
+            <input type="text" id="chat-input" placeholder="Escribe aquí..." onkeypress="handleChat(event)">
         </div>
     </div>
     <button class="ai-toggle" onclick="toggleChat()"><i class="fas fa-robot"></i></button>
@@ -92,11 +109,8 @@
     <footer>
         <div class="container footer-grid">
             <div class="footer-col">
-                <div class="logo-footer"><i class="fas fa-laptop-code"></i> TecnoSolutions</div>
-                <p>Expertos en soporte técnico digital. Brindamos soluciones rápidas y garantizadas.</p>
-                <div class="social-links">
-                    <i class="fab fa-facebook"></i> <i class="fab fa-instagram"></i> <i class="fab fa-whatsapp"></i>
-                </div>
+                <div class="logo-footer">TecnoSolutions</div>
+                <p>Expertos en soporte técnico digital.</p>
             </div>
             <div class="footer-col">
                 <h4>Navegación</h4>
@@ -106,15 +120,9 @@
                     <li><a href="videos.html">Videos</a></li>
                 </ul>
             </div>
-            <div class="footer-col">
-                <h4>Contacto</h4>
-                <p><i class="fas fa-envelope blue-icon-small"></i> soporte@tecnosolutions.com</p>
-                <p><i class="fas fa-phone blue-icon-small"></i> +1 234 567 8900</p>
-            </div>
         </div>
         <div class="footer-bottom"><p>&copy; 2026 TecnoSolutions.</p></div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

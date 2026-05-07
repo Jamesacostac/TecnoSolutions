@@ -8,23 +8,25 @@
 </head>
 <body>
     <header><div class="container header-content"><a href="index.html" class="logo">TecnoSolutions</a><nav><ul><li><a href="index.html">Inicio</a></li><li><a href="videos.html">Videos</a></li><li id="auth-btn-container"></li></ul></nav></div></header>
+
     <section class="container section-padding">
         <h1 class="center-text">Tutoriales Paso a Paso</h1>
         <div class="category-filters">
+            <button class="filter-btn active" onclick="filterTutorials('all')">Todos</button>
             <button class="filter-btn" onclick="filterTutorials('laptop')">Laptops</button>
             <button class="filter-btn" onclick="filterTutorials('smartphone')">Móviles</button>
             <button class="filter-btn" onclick="filterTutorials('consola')">Consolas</button>
-            <button class="filter-btn active" onclick="filterTutorials('all')">Ver Todos</button>
         </div>
+
         <div class="accordion-container">
-            <details class="manual-item laptop"><summary><div class="summary-content"><div class="icon-box-small orange"><i class="fas fa-fan"></i></div><h3>Limpiar Ventiladores</h3></div></summary><div class="details-body">Remueve el polvo con aire comprimido.</div></details>
-            <details class="manual-item laptop"><summary><div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-rocket"></i></div><h3>Acelerar Windows</h3></div></summary><div class="details-body">Limpia temporales y apps de inicio.</div></details>
-            <details class="manual-item laptop"><summary><div class="summary-content"><div class="icon-box-small orange"><i class="fas fa-microchip"></i></div><h3>Pasta Térmica</h3></div></summary><div class="details-body">Aplica Arctic MX-6 para bajar temperatura.</div></details>
-            <details class="manual-item smartphone"><summary><div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-bolt"></i></div><h3>Puerto Carga</h3></div></summary><div class="details-body">Limpia pelusas con palillo de madera.</div></details>
-            <details class="manual-item smartphone"><summary><div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-sync"></i></div><h3>Respaldo</h3></div></summary><div class="details-body">Usa la nube para tus fotos.</div></details>
-            <details class="manual-item smartphone"><summary><div class="summary-content"><div class="icon-box-small blue"><i class="fas fa-mobile-alt"></i></div><h3>Pantalla</h3></div></summary><div class="details-body">Limpieza con microfibra.</div></details>
-            <details class="manual-item consola"><summary><div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-gamepad"></i></div><h3>Polvo PS5</h3></div></summary><div class="details-body">Aspira colectores de polvo.</div></details>
-            <details class="manual-item consola"><summary><div class="summary-content"><div class="icon-box-small dark-blue"><i class="fas fa-wifi"></i></div><h3>Red Lag</h3></div></summary><div class="details-body">Usa cable Ethernet.</div></details>
+            <details class="manual-item laptop"><summary><i class="fas fa-fan"></i> 1. Limpiar Ventiladores</summary><div class="p-15">Usa aire comprimido para remover el polvo.</div></details>
+            <details class="manual-item laptop"><summary><i class="fas fa-microchip"></i> 2. Cambio de Pasta Térmica</summary><div class="p-15">Aplica una gota de Arctic MX-6.</div></details>
+            <details class="manual-item laptop"><summary><i class="fas fa-rocket"></i> 3. Optimizar Windows</summary><div class="p-15">Desactiva apps de inicio innecesarias.</div></details>
+            <details class="manual-item smartphone"><summary><i class="fas fa-mobile-alt"></i> 4. Puerto de Carga</summary><div class="p-15">Limpia con palillo de madera y cuidado.</div></details>
+            <details class="manual-item smartphone"><summary><i class="fas fa-battery-full"></i> 5. Calibración Batería</summary><div class="p-15">Ciclo completo de carga 0% a 100%.</div></details>
+            <details class="manual-item consola"><summary><i class="fas fa-gamepad"></i> 6. Limpiar Polvo PS5</summary><div class="p-15">Aspira los colectores de polvo laterales.</div></details>
+            <details class="manual-item consola"><summary><i class="fas fa-wifi"></i> 7. Mejorar Ping</summary><div class="p-15">Usa cable Ethernet Cat6.</div></details>
+            <details class="manual-item smartphone"><summary><i class="fas fa-shield-alt"></i> 8. Eliminar Malware</summary><div class="p-15">Análisis con Malwarebytes en modo seguro.</div></details>
         </div>
     </section>
     <script src="script.js"></script>
