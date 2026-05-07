@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecnoSolutions | Inicio</title>
+    <title>TecnoSolutions | Soporte Técnico</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -15,6 +15,7 @@
                 <ul id="nav-links">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="tutoriales.html">Tutoriales</a></li>
+                    <li><a href="#contacto-seccion" class="contact-link">Contacto</a></li>
                     <li id="auth-btn-container"><a href="registro.html" class="btn-nav">Login / Registro</a></li>
                 </ul>
             </nav>
@@ -23,8 +24,8 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Soluciones Tecnológicas Pro</h1>
-            <p>Diagnóstico inteligente, guías expertas y mantenimiento de alta gama.</p>
+            <h1>Expertos en Tecnología</h1>
+            <p>Diagnóstico con IA, mantenimiento especializado y tutoriales paso a paso.</p>
         </div>
     </section>
 
@@ -32,88 +33,101 @@
         <h2 class="section-title">Guías Rápidas en Video</h2>
         <div class="video-grid">
             <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <h3>Mantenimiento de Laptops</h3>
-                <p>Aprende los fundamentos de la limpieza interna.</p>
+                <div class="video-responsive"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" frameborder="0" allowfullscreen></iframe></div>
+                <h3>Laptops</h3>
             </div>
             <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/Oia-nUis78A" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <h3>Limpieza PS5 y Consolas</h3>
-                <p>Evita el sobrecalentamiento en tus consolas.</p>
+                <div class="video-responsive"><iframe src="https://www.youtube.com/embed/Oia-nUis78A" frameborder="0" allowfullscreen></iframe></div>
+                <h3>Consolas</h3>
             </div>
             <div class="video-card">
-                <div class="video-responsive">
-                    <iframe src="https://www.youtube.com/embed/9_vQ52uF9hE" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <h3>Optimización de Windows</h3>
-                <p>Mejora el rendimiento de tu PC en minutos.</p>
+                <div class="video-responsive"><iframe src="https://www.youtube.com/embed/9_vQ52uF9hE" frameborder="0" allowfullscreen></iframe></div>
+                <h3>PC Gamer</h3>
             </div>
         </div>
     </section>
 
-    <section class="bg-alt section-padding">
+    <section id="contacto-seccion" class="bg-alt section-padding">
         <div class="container contact-wrapper">
             <div class="contact-info">
-                <h2 style="margin-bottom: 20px;">¿Necesitas ayuda experta?</h2>
-                <p class="subtitle">Agenda una cita técnica o envíanos tus dudas.</p>
-                
+                <h2 style="margin-bottom: 20px;">¿Necesitas ayuda especializada?</h2>
+                <p>Contáctanos para agendar una cita técnica.</p>
                 <div class="info-list">
                     <div class="info-item"><i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong> Av. Tecnología #123, Ciudad Digital</div>
                     <div class="info-item"><i class="fas fa-phone"></i> <strong>Teléfono:</strong> +1 234 567 8900</div>
                     <div class="info-item"><i class="fas fa-envelope"></i> <strong>Email:</strong> soporte@tecnosolutions.com</div>
-                    <div class="info-item"><i class="fas fa-clock"></i> <strong>Horario:</strong> Lun-Vie 9am a 6pm</div>
+                    <div class="info-item"><i class="fas fa-clock"></i> <strong>Horario:</strong> Lun-Vie 9:00am - 6:00pm</div>
                 </div>
-
                 <a href="https://wa.me/1234567890" target="_blank" class="btn-whatsapp">
                     <i class="fab fa-whatsapp"></i> Agendar Cita por WhatsApp
                 </a>
             </div>
 
             <div class="comment-form-card">
-                <h3>Crear Comentario</h3>
+                <h3>Envíanos un mensaje</h3>
                 <form id="commentForm">
+                    <div class="form-group"><label>Nombre completo *</label><input type="text" required></div>
+                    <div class="form-group"><label>Correo electrónico *</label><input type="email" required></div>
                     <div class="form-group">
-                        <label>Nombre completo *</label>
-                        <input type="text" placeholder="Tu nombre" required>
+                        <label>Servicio de interés</label>
+                        <select><option>Reparación de Laptop</option><option>Mantenimiento Consola</option><option>Optimización PC</option></select>
                     </div>
-                    <div class="form-group">
-                        <label>Correo electrónico *</label>
-                        <input type="email" placeholder="email@ejemplo.com" required>
+                    <div class="form-group"><label>Mensaje *</label><textarea rows="4" required></textarea></div>
+                    <div class="form-check">
+                        <input type="checkbox" id="check" required> <label for="check">Autorizo el tratamiento de mis datos personales. *</label>
                     </div>
-                    <div class="form-group">
-                        <label>Comentario *</label>
-                        <textarea rows="4" placeholder="Escribe aquí tu reseña o consulta..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Enviar Comentario</button>
+                    <button type="submit" class="btn-submit">Enviar Mensaje</button>
                 </form>
             </div>
         </div>
     </section>
 
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo-footer"><i class="fas fa-laptop-code"></i> TecnoSolutions</div>
+                <p>Tu aliado en el mantenimiento y optimización de tus dispositivos tecnológicos.</p>
+                <div class="social-links">
+                    <span>Síguenos</span>
+                    <div class="icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="tutoriales.html">Tutoriales</a></li>
+                    <li><a href="#">Soporte IA</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Tecnología #123</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                <p><i class="fas fa-envelope"></i> soporte@tecnosolutions.com</p>
+            </div>
+        </div>
+    </footer>
+
     <div class="chat-floating-wrapper">
         <button class="chat-toggle" onclick="toggleChat()"><i class="fas fa-robot"></i></button>
         <div class="chat-window" id="chat-window">
-            <div class="chat-header">
-                <span>Asistente de Diagnóstico</span>
-                <i class="fas fa-times" onclick="toggleChat()" style="cursor:pointer"></i>
-            </div>
+            <div class="chat-header">Asistente IA</div>
             <div class="chat-box" id="chat-box">
-                <div class="msg bot">¡Hola! Soy tu técnico IA. ¿Qué dispositivo tienes (marca y modelo) y qué problema presenta?</div>
+                <div class="msg bot">¡Hola! Dime qué dispositivo tienes (Celular, PC o Consola) y qué falla presenta.</div>
             </div>
             <div class="chat-input">
-                <input type="text" id="user-input" placeholder="Escribe aquí...">
+                <input type="text" id="user-input" placeholder="Ej: Mi laptop se calienta...">
                 <button onclick="handleChat()"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 TecnoSolutions | Tecnología al alcance de todos.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>

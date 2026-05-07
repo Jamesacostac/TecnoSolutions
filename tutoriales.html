@@ -2,15 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutoriales Técnicos | TecnoSolutions</title>
+    <title>Tutoriales - TecnoSolutions</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <a href="index.html" class="logo" style="text-decoration:none"><i class="fas fa-laptop-code"></i> TecnoSolutions</a>
+            <div class="logo"><i class="fas fa-laptop-code"></i> TecnoSolutions</div>
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -22,52 +21,61 @@
     </header>
 
     <section class="container section-padding">
-        <h1>Centro de Conocimiento Técnico</h1>
-        <p style="margin-bottom: 40px; color: #64748b;">Guías detalladas escritas por nuestros especialistas para el mantenimiento de tus equipos.</p>
+        <h1 class="center-text">Tutoriales de Mantenimiento Paso a Paso</h1>
+        
+        <div class="category-filters">
+            <button class="cat-btn"><i class="fas fa-laptop"></i> Laptops</button>
+            <button class="cat-btn"><i class="fas fa-mobile-alt"></i> Smartphones</button>
+            <button class="cat-btn"><i class="fas fa-gamepad"></i> Consolas</button>
+        </div>
 
-        <div class="tutorial-list">
-            <article class="tutorial-card-full">
-                <div class="tutorial-icon"><i class="fas fa-tools"></i></div>
-                <div class="tutorial-content">
-                    <h2>Mantenimiento Preventivo de Laptop</h2>
-                    <p>Guía completa para prolongar la vida útil de tu computadora portátil.</p>
-                    
-                    <div class="guia-detallada">
-                        <h4>Materiales Requeridos:</h4>
-                        <ul class="check-list">
-                            <li>Alcohol Isopropílico (90%+)</li>
-                            <li>Aire comprimido</li>
-                            <li>Paño de microfibra</li>
-                            <li>Destornilladores de precisión (Philips #0, #00)</li>
-                            <li>Pasta térmica de alta calidad</li>
+        <h2 class="section-subtitle"><i class="fas fa-laptop"></i> Tutoriales para Laptops y PC</h2>
+
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <i class="fas fa-tools icon-bg"></i>
+                        <div>
+                            <h3>Limpieza Profunda de Laptop (Interna y Externa)</h3>
+                            <p>Guía para limpiar tu equipo y reemplazar pasta térmica.</p>
+                        </div>
+                    </div>
+                    <span class="view-link">Ver Materiales y Pasos <i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="content-inner">
+                        <h4>Materiales:</h4>
+                        <ul class="material-list">
+                            <li>Alcohol Isopropílico</li>
+                            <li>Aire Comprimido</li>
+                            <li>Pasta Térmica</li>
                         </ul>
-
-                        <h4>Pasos Detallados:</h4>
-                        <ol class="step-list">
-                            <li><strong>Desconexión Total:</strong> Apaga el equipo, desconecta el cargador y, si es posible, retira la batería externa. Presiona el botón de encendido por 10 segundos para descargar estática.</li>
-                            <li><strong>Apertura:</strong> Retira los tornillos de la tapa inferior con cuidado. Organiza los tornillos por tamaño, ya que suelen variar.</li>
-                            <li><strong>Limpieza de Ventiladores:</strong> Sostén las aspas del ventilador (para que no giren) y aplica ráfagas cortas de aire comprimido.</li>
-                            <li><strong>Cambio de Pasta Térmica:</strong> Retira el disipador de calor, limpia la pasta vieja con alcohol y aplica una gota nueva del tamaño de un grano de arroz sobre el procesador.</li>
-                            <li><strong>Cierre y Prueba:</strong> Reensambla todo y enciende el equipo verificando las temperaturas con un software especializado.</li>
-                        </ol>
+                        <h4>Pasos:</h4>
+                        <div class="step"><span class="step-num">1</span> Retira la batería y tornillos traseros.</div>
+                        <div class="step"><span class="step-num">2</span> Limpia el polvo del ventilador con aire comprimido.</div>
                     </div>
                 </div>
-            </article>
+            </div>
 
-            <article class="tutorial-card-full">
-                <div class="tutorial-icon"><i class="fas fa-microchip"></i></div>
-                <div class="tutorial-content">
-                    <h2>Optimización de Sistema Operativo</h2>
-                    <p>Elimina procesos innecesarios y acelera el arranque de tu PC.</p>
-                    <div class="guia-detallada">
-                        <ol class="step-list">
-                            <li><strong>Administrador de Tareas:</strong> Presiona Ctrl + Shift + Esc. Ve a la pestaña 'Inicio' y deshabilita aplicaciones que no necesites al encender.</li>
-                            <li><strong>Limpieza de Temporales:</strong> Presiona Win + R, escribe '%temp%' y borra todo el contenido de la carpeta.</li>
-                            <li><strong>Desfragmentación:</strong> En discos mecánicos (HDD), usa la herramienta 'Desfragmentar y optimizar unidades'. (No recomendado para SSD).</li>
-                        </ol>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <div class="header-left">
+                        <i class="fas fa-tachometer-alt icon-bg-red"></i>
+                        <div>
+                            <h3>Optimización de Windows 10/11</h3>
+                            <p>Acelera el sistema al máximo.</p>
+                        </div>
+                    </div>
+                    <span class="view-link">Ver Pasos <i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="content-inner">
+                        <div class="step"><span class="step-num">1</span> Deshabilita programas de inicio (Task Manager).</div>
+                        <div class="step"><span class="step-num">2</span> Borra archivos temporales de la carpeta %temp%.</div>
                     </div>
                 </div>
-            </article>
+            </div>
         </div>
     </section>
 
