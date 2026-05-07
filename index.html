@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecnoSolutions - Inicio</title>
+    <title>TecnoSolutions - Mantenimiento Profesional</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -13,7 +13,8 @@
             <div class="logo"><i class="fas fa-laptop-code"></i> <span>TecnoSolutions</span></div>
             <nav>
                 <ul id="main-nav">
-                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
                     <li><a href="tutoriales.html">Tutoriales</a></li>
                     <li><a href="#" onclick="checkAuth('Soporte Presencial')"><i class="fas fa-lock"></i> Soporte Presencial</a></li>
                     <li><a href="#" onclick="checkAuth('Video Talleres')"><i class="fas fa-lock"></i> Video Talleres</a></li>
@@ -26,70 +27,87 @@
     <section id="inicio" class="hero">
         <div class="container hero-content">
             <h1>Soluciones profesionales para tus dispositivos</h1>
-            <p>Asesoría especializada para laptops, PCs, celulares y consolas.</p>
+            <p>Asesoría especializada para <strong>laptops, PCs, celulares y consolas</strong>. ¡Mantén tus equipos al 100%!</p>
             <a href="#servicios" class="btn">Nuestros Servicios</a>
+            <a href="tutoriales.html" class="btn btn-alt">Ver Tutoriales</a>
         </div>
     </section>
 
-    <section id="servicios" class="services container" style="padding: 60px 0;">
+    <section id="servicios" class="services container">
         <div class="section-title">
             <h2>Nuestros Servicios</h2>
-            <p>Mantenimiento y reparación integral</p>
+            <p>Soluciones integrales para el mantenimiento y reparación</p>
         </div>
         <div class="services-grid">
-            <div class="service-card">
+            <div class="service-card" onclick="scrollToSection('mantenimiento')">
                 <i class="fas fa-tools fa-3x"></i>
                 <h3>Mantenimiento Preventivo</h3>
-                <p>Limpieza y optimización física e interna.</p>
+                <p>Limpieza interna y externa, optimización de software y más.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" onclick="scrollToSection('virus')">
                 <i class="fas fa-bug fa-3x"></i>
                 <h3>Eliminación de Virus</h3>
-                <p>Protección y limpieza de malware avanzado.</p>
+                <p>Limpieza de malware y protección con antivirus especializados.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" onclick="scrollToSection('actualizacion')">
                 <i class="fas fa-cogs fa-3x"></i>
-                <h3>Actualizaciones</h3>
-                <p>Instalación de SSD, RAM y componentes.</p>
+                <h3>Actualización de Hardware</h3>
+                <p>Asesoría e instalación de SSD, RAM y tarjetas gráficas.</p>
             </div>
         </div>
     </section>
 
-    <section id="videos" class="container" style="padding-bottom: 80px;">
+    <section id="videos" class="videos-section container">
         <div class="section-title">
             <h2>Video Tutoriales</h2>
-            <p>Aprende visualmente con nuestros expertos</p>
+            <p>Aprende a resolver problemas comunes paso a paso</p>
         </div>
+
+        <h3 id="mantenimiento" class="video-subtitle">Mantenimiento Preventivo</h3>
         <div class="video-grid">
             <div class="video-card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe>
-                </div>
-                <div class="video-content">
-                    <h3>Limpieza interna de laptop</h3>
-                    <p>Guía paso a paso para abrir y limpiar tu equipo.</p>
-                </div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe></div>
+                <div class="video-content"><h3>Limpieza interna de laptop</h3><p>Aprende a limpiar el interior de tu laptop de forma segura.</p></div>
             </div>
             <div class="video-card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe>
-                </div>
-                <div class="video-content">
-                    <h3>Optimización de Windows</h3>
-                    <p>Configura tu sistema para que vuele.</p>
-                </div>
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe></div>
+                <div class="video-content"><h3>Optimización de Windows</h3><p>Mejora el rendimiento de tu sistema operativo.</p></div>
+            </div>
+        </div>
+
+        <h3 id="virus" class="video-subtitle">Eliminación de Virus</h3>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe></div>
+                <div class="video-content"><h3>Malware Avanzado</h3><p>Identifica y elimina software malicioso.</p></div>
+            </div>
+            <div class="video-card">
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe></div>
+                <div class="video-content"><h3>Ransomware</h3><p>Protege tus datos contra secuestro digital.</p></div>
+            </div>
+        </div>
+
+        <h3 id="actualizacion" class="video-subtitle">Actualización de Hardware</h3>
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe></div>
+                <div class="video-content"><h3>Instalación de RAM</h3><p>Guía completa para instalar memoria en tu PC.</p></div>
+            </div>
+            <div class="video-card">
+                <div class="video-container"><iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe></div>
+                <div class="video-content"><h3>Cambio de SSD</h3><p>Aumenta la velocidad de tu equipo drásticamente.</p></div>
             </div>
         </div>
     </section>
 
     <div id="chat-window" class="chat-floating-window">
         <div class="chat-header" onclick="toggleChat()">
-            <div class="chat-header-info"><i class="fas fa-robot"></i> <span>Asistente IA</span></div>
+            <div class="chat-header-info"><i class="fas fa-robot"></i> <span>Soporte IA</span></div>
             <i class="fas fa-chevron-up" id="chat-icon-toggle"></i>
         </div>
         <div class="chat-body collapsed" id="chat-body">
             <div class="chat-messages" id="chat-box">
-                <div class="message bot-message">¡Hola! ¿En qué puedo ayudarte hoy?</div>
+                <div class="message bot-message">¡Hola! Soy Gemini. ¿Qué problema tiene tu PC hoy?</div>
             </div>
             <div class="chat-input">
                 <input type="text" id="chat-input-field" placeholder="Escribe tu duda...">
